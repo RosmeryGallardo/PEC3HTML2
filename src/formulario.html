@@ -4,11 +4,97 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./assets/styles/main.scss" />
-  <title>Formulario de Contacto</title>
+  <title>Detalle de Ponencias, Ubicación y Contacto</title>
+  <!-- Bootstrap Icons y FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    #map {
+      height: 350px;
+      width: 100%;
+      margin-top: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+    }
+    .map-search {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+    .map-search input[type="text"] {
+      flex-grow: 1;
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    .map-search button {
+      padding: 0.5rem 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .map-search button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    <include src="./views/blocks/header.html"></include>
-  <main class="contact">
+  <include src="./views/blocks/header.html"></include>
+
+  <main class="event-page">
+
+    <!-- Sección Calendario Ponencias -->
+    <section class="calendar">
+      <h1>Próximas Charlas</h1>
+
+      <article class="calendar__item">
+        <h2 class="calendar__title">
+          <i class="fa-solid fa-lightbulb calendar__icon" aria-hidden="true"></i>
+          Innovación Tecnológica
+        </h2>
+        <p class="calendar__description">Exploraremos las últimas tendencias en innovación tecnológica aplicada a la educación.</p>
+        <ul class="calendar__details">
+          <li><strong>Precio:</strong> $50</li>
+          <li><strong>Lugar:</strong> Auditorio Principal</li>
+          <li><strong>Fecha:</strong> 15 de Junio de 2025</li>
+        </ul>
+        <button class="btn btn--buy" type="button" onclick="alert('Compra realizada para Ponencia 1')">Comprar Entrada</button>
+      </article>
+
+      <article class="calendar__item">
+        <h2 class="calendar__title">
+          <i class="fa-solid fa-robot calendar__icon" aria-hidden="true"></i>
+         Inteligencia Artificial en la Educación
+        </h2>
+        <p class="calendar__description">Un análisis profundo sobre cómo la IA está transformando los métodos de enseñanza.</p>
+        <ul class="calendar__details">
+          <li><strong>Precio:</strong> $70</li>
+          <li><strong>Lugar:</strong> Sala B</li>
+          <li><strong>Fecha:</strong> 16 de Junio de 2025</li>
+        </ul>
+        <button class="btn btn--buy" type="button" onclick="alert('Compra realizada para Ponencia 2')">Comprar Entrada</button>
+      </article>
+
+    </section>
+
+    <!-- Sección Dónde Encontrarnos -->
+    <section class="location">
+      <h1>Dónde Encontrarnos</h1>
+      <p>Usa el buscador para encontrar nuestra ubicación en el mapa:</p>
+      <div class="map-search">
+        <input type="text" id="searchInput" placeholder="Buscar dirección, ciudad, lugar..." />
+        <button id="searchBtn">Buscar</button>
+      </div>
+      <div id="map"></div>
+    </section>
+
+    <!-- Sección Formulario de Contacto -->
     <section class="contact__form">
       <h1>Contáctanos</h1>
       <form action="https://your-netlify-url.com" method="POST">
@@ -27,6 +113,54 @@
         <button type="submit">Enviar</button>
       </form>
     </section>
+
   </main>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+
+    const map = L.map('map').setView([41.3851, 2.1734], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    let marker = L.marker([41.3851, 2.1734]).addTo(map).bindPopup('Nuestra ubicación').openPopup();
+
+    async function searchLocation(query) {
+      const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`;
+      const response = await fetch(url);
+      if (!response.ok) {
+        alert('Error en la búsqueda');
+        return null;
+      }
+      const data = await response.json();
+      return data;
+    }
+
+    document.getElementById('searchBtn').addEventListener('click', async () => {
+      const query = document.getElementById('searchInput').value.trim();
+      if (!query) {
+        alert('Por favor, escribe una dirección o lugar para buscar.');
+        return;
+      }
+      const results = await searchLocation(query);
+      if (results && results.length > 0) {
+        const first = results[0];
+        const lat = parseFloat(first.lat);
+        const lon = parseFloat(first.lon);
+
+
+        map.setView([lat, lon], 15);
+        marker.setLatLng([lat, lon]).setPopupContent(first.display_name).openPopup();
+      } else {
+        alert('No se encontraron resultados para esa búsqueda.');
+      }
+    });
+  </script>
+    <include src="./views/blocks/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script>
 </body>
 </html>

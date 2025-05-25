@@ -8,24 +8,10 @@
     <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
   </head>
   <body class="page">
-    
-    <!-- Header -->
-    <header class="header">
-      <div class="header__container">
-        <div class="header__logo">
-          <img src="/src/assets/images/Logopage.png" alt="Logo" class="header__logo-img" />
-        </div>
-        <nav class="header__nav">
-          <ul class="header__list">
-            <li class="header__item"><a href="article.html" class="header__link">Inicio</a></li>
-            <li class="header__item"><a href="speakers.html" class="header__link">Ponentes</a></li>
-            <li class="header__item"><a href="formulario.html" class="header__link">Contacto</a></li>
-          </ul>
-        </nav>
-      </div>
-      <h1 class="header__title">Jornadas de Economía Circular</h1>
-    </header>
+    <include src="./views/blocks/header.html"></include>
+
     <main class="main">
+
        <!-- Círculos con iconos-->
       <section class="icons">
         <div class="icons__circle"><i class="fas fa-recycle"></i></div>
@@ -40,29 +26,33 @@
           </p>
           <button class="intro__btn">Inscribirse</button>
         </div>
+          <div class="content__highlight-text">
+            <p>
+              Participa en nuestros talleres y sé parte del cambio circular
+            </p>
+        </div>
       </section>
       <section class="content">
           <div class="content__card">
             <i class="fas fa-city content__icon"></i>
             <div class="content__card-inner">
             <h2 class="content__title">Ciudades circulares</h2>
-            <p class="content__text">...</p>
           </div>
+          <p class="content__text">Exploraremos cómo las ciudades están adoptando modelos sostenibles, reutilización de recursos y estrategias urbanas circulares.</p>
         </div>
         <div class="content__card">
           <i class="bx bx-globe content__icon"></i>
           <div class="content__card-inner">
             <h2 class="content__title">Moda circular</h2>
-            <p class="content__text">Contenido del artículo 3...</p>
           </div>
-
+            <p class="content__text">Se abordarán prácticas en diseño, producción y consumo textil que reducen el impacto ambiental del sector de la moda.</p>
         </div>
         <div class="content__card">
           <i class="bx bx-bulb content__icon"></i>
           <div class="content__card-inner">
             <h2 class="content__title">Tecnología circular</h2>
-            <p class="content__text">Contenido del artículo 3...</p>
           </div>
+          <p class="content__text">Análisis de la gestión de residuos electrónicos, ecodiseño y tecnología aplicada a la optimización de recursos.</p>
         </div>
 
         <div class="content__highlight-wrapper">
@@ -70,11 +60,6 @@
           <div class="content__highlight-wrapper-inner-circle">
             <h2 class="content__highlight-title">Economía Circular</h2>
           </div>
-        </div>
-        <div class="content__highlight">
-          <p class="content__highlight-text">
-            Participa en nuestros talleres y sé parte del cambio circular
-          </p>
         </div>
       <!-- Círculos de fondo -->
       <div class="content__circle-bg"></div>
@@ -86,7 +71,6 @@
 
     <!-- Footer -->
     <include src="./views/blocks/footer.html"></include>
-
     <script type="module" src="./assets/scripts/main.js"></script>
   </body>
 </html>

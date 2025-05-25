@@ -1,11 +1,19 @@
 // @use '../base/variables';
 // @use '../base/mixins' as *;
+
 .participants {
   text-align: center;
   padding: 2rem;
 
   &__intro {
     margin-bottom: 2rem;
+    h1 {
+      color: $uoc-masterbrand;
+    }
+    p {
+      color: $uoc-corporate;
+      margin-top: 0.5rem;
+    }
   }
 
   &__list {
@@ -14,11 +22,19 @@
     justify-content: center;
     gap: 2rem;
     padding: 2rem 0;
+
+    @include respond-to('desktop') {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding: 2rem 0;
+      justify-items: center;
+    }
   }
 
   &__item {
     flex: 1 1 250px;
-    max-width: 250px;
+    max-width: 400px;
     background-color: #fff;
     padding: 1rem;
     border-radius: 8px;
@@ -37,10 +53,11 @@
     h2 {
       margin-top: 1rem;
       font-size: 1.2rem;
+      color: $uoc-masterbrand;
     }
 
     p {
-      color: #555;
+      color: $uoc-corporate;
       margin-top: 0.5rem;
     }
   }

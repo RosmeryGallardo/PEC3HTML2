@@ -12,10 +12,7 @@
   }
 }
 
-
-
 .header {
-  border: 2px solid red;
   display: grid;
   grid-template-rows: auto auto;
   background: url('/src/assets/images/Poster.jpg') center/cover no-repeat;
@@ -46,7 +43,6 @@
     &-img {
       width: 100%;
       height: auto;
-      border: 2px solid red;
     }
   }
 
@@ -91,7 +87,7 @@
 
   &__title {
     margin-top: 1.5rem;
-    @include responsive-header-title(2rem, 4rem, 12rem);
+    @include responsive-header-title(2rem, 4rem, 6rem);
     font-weight: bold;
     z-index: 1;
     color: $uoc-bg;

@@ -1,12 +1,14 @@
-// @use '../base/variables';
-// @use '../base/mixins' as *;
+// @import '../base/variables';
+// @import '../base/mixins';
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   width: 100%;
   overflow-x: hidden;
@@ -15,11 +17,20 @@ html, body {
   color: $uoc-bg;
 }
 
-.page {
-  width: 100%;
-  max-width: 100vw;
-  overflow-x: hidden;
-  background-color: $uoc-bg;
+.card {
+  width: 400%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include respond-to('desktop') {
+    padding: 4rem;
+    max-width: 1400px;
+  }
 }
 
 // ------------------ INTRO ------------------
@@ -30,21 +41,23 @@ html, body {
   border-radius: $border-radius;
   width: 100%;
 
-  &__title {
-    font-size: 2rem;
-    font-weight: 700;
+  &__title,
+  &__description {
     color: $uoc-corporate;
     letter-spacing: 0.1rem;
+  }
+
+  &__title {
+    font-weight: 700;
+    @include responsive-header-title(2rem, 2.25rem, 2.5rem);
   }
 
   &__description {
-    font-size: 0.8rem;
-    color: $uoc-corporate;
-    letter-spacing: 0.1rem;
+    @include responsive-header-title(0.8rem, 0.9rem, 1rem);
   }
 }
 
-// ------------------ CIRCLES BASE ------------------
+// ------------------ ICON CIRCLES ------------------
 
 .icons {
   display: flex;
@@ -74,24 +87,42 @@ html, body {
 
 .content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
-  position: relative;
-  gap: 0.5rem;
-
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 2rem;
+  justify-items: center;
+  
   @include respond-to('tablet') {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to('desktop') {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
   }
 
   &__card {
     position: relative;
     text-align: center;
-    max-width: 200px;
-    width: 100%;
     grid-column: 1;
-    max-height: 200px;
+    max-height: 150px;
     overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+    //border: 2px solid red;
+
+    @include respond-to('desktop') {
+      //padding: 2rem;
+      max-height: 250px;
+      //max-width: 100%;
+      //width: 100%;
+    }
+
+    &:nth-child(2) {
+      align-self: center;
+    }
 
     &-inner {
       border-radius: $border-radius;
@@ -104,92 +135,70 @@ html, body {
       border-bottom-left-radius: 0;
     }
 
-    &:nth-child(2) {
-      align-self: center;
-    }
-
     i {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
-      color: $uoc-bg;
+      color: $uoc-corporate;
+      @include respond-to('desktop') {
+        font-size: 4rem;
+      }
     }
 
     h2,
     p {
       color: $uoc-corporate;
+      
     }
 
     h2 {
-      font-size: 1rem;
+      font-size: 0.8rem;
       font-weight: bold;
       margin-bottom: 0.5rem;
+      @include respond-to('desktop') {
+        font-size: 1.3rem;
+      }
     }
 
     p {
-      font-size: 1rem;
-      color: $uoc-corporate;
-    }
-
-    // Container query para adaptar tamaño según ancho contenedor (browser soportados)
-    @container (max-width: 250px) {
-      max-width: 100%;
-      max-height: none;
-
-      &-inner {
-        padding: 0.5rem;
-      }
-
-      i {
-        font-size: 2rem;
-      }
-
-      h2 {
-        font-size: 0.9rem;
-      }
-
-      p {
-        font-size: 0.9rem;
+      font-size: 0.6rem;
+      text-align: left;
+      @include respond-to('desktop') {
+        font-size: 1.3rem;
+        line-height: 1.5;
       }
     }
+
+
   }
 
-  // ---------- FONDO: CÍRCULOS DECORATIVOS -----------
+  // ---------- CÍRCULOS DE FONDO -----------
+
+  @mixin circle-bg-base($width, $height, $top, $right, $bg-color, $border-radius, $transform, $opacity: 0.15, $z-index: -1) {
+    opacity: $opacity;
+    position: absolute;
+    z-index: $z-index;
+    pointer-events: none;
+    background-color: $bg-color;
+    width: $width;
+    height: $height;
+    top: $top;
+    right: $right;
+    border-radius: $border-radius;
+    transform: $transform;
+    @include transition(all);
+  }
 
   &__circle-bg {
-    opacity: 0.15;
-    position: absolute;
-    z-index: -1;
-    pointer-events: none;
-    background-color: lighten($uoc-corporate, 20%);
-    width: 45vw;
-    height: 45vw;
-    top: 0;
-    right: -10vw;
-    border-radius: 0 0 50% 50%;
-    transform: rotate(45deg);
-    transition: all 0.3s ease;
+    @include circle-bg-base(45vw, 45vw, 0, -10vw, lighten($uoc-corporate, 20%), 0 0 50% 50%, rotate(45deg));
 
     &--alt {
-      width: 50vw;
-      height: 60vw;
-      top: 40%;
+      @include circle-bg-base(50vw, 60vw, 40%, auto, $hover-color, 50% 50% 0 0, rotate(-30deg), 0.2, -2);
       left: -20vw;
-      background-color: $hover-color;
-      z-index: -2;
-      opacity: 0.2;
-      border-radius: 50% 50% 0 0;
-      transform: rotate(-30deg);
+      right: auto;
     }
 
     &--alt2 {
-      width: 35vw;
-      height: 50vw;
-      top: 80%;
-      right: -10vw;
-      background-color: darken($uoc-corporate, 10%);
-      opacity: 0.2;
-      border-radius: 50% 0 0 50%;
-      transform: rotate(15deg);
+      @include circle-bg-base(35vw, 50vw, 80%, -10vw, darken($uoc-corporate, 10%), 50% 0 0 50%, rotate(15deg), 0.2);
     }
 
     @include respond-to('tablet') {
@@ -203,6 +212,7 @@ html, body {
         height: 70vw;
         top: -25%;
         left: -15vw;
+        right: auto;
       }
 
       &--alt2 {
@@ -224,6 +234,7 @@ html, body {
         height: 50vw;
         top: 30%;
         left: -15vw;
+        right: auto;
       }
 
       &--alt2 {
@@ -238,12 +249,7 @@ html, body {
   // ---------- TEXTO DESTACADO -----------
 
   &__highlight-wrapper {
-    outline: 1px dashed rgba(
-      red($uoc-corporate),
-      green($uoc-corporate),
-      blue($uoc-corporate),
-      0.5
-    );
+    outline: 1px dashed rgba(red($uoc-corporate), green($uoc-corporate), blue($uoc-corporate), 0.5);
     grid-column: 2;
     grid-row: 2 / 3;
     border-radius: 50%;
@@ -257,25 +263,28 @@ html, body {
     opacity: 0.7;
     position: relative;
 
+    @include respond-to('desktop') {
+      height: 550px;
+      width: 550px;
+      grid-row: 1 / 3;
+      border-width: 3px;
+      opacity: 0.5;
+      box-shadow: 0 0 15px rgba(red($uoc-corporate), green($uoc-corporate), blue($uoc-corporate), 0.7);
+    }
+
     i {
       position: absolute;
-      font-size: 10rem;
+      font-size: 15rem;
       background-color: transparent;
       color: $uoc-bg;
       display: flex;
       opacity: 0.9;
       align-items: center;
       z-index: 1;
-    }
 
-    &-inner-circle {
-      width: 80%;
-      height: 80%;
-      border-radius: 50%;
-      display: flex;
-      text-align: center;
-      z-index: 1;
-      position: relative;
+      @include respond-to('desktop') {
+        font-size: 54rem;
+      }
     }
   }
 
@@ -295,25 +304,29 @@ html, body {
       z-index: 2;
       font-weight: 400;
       letter-spacing: 0.1rem;
-      font-size: 0.9rem;
+      font-size: 1.5rem;
+
+      @include respond-to('desktop') {
+        font-size: 3rem;
+      }
     }
 
     &-text {
-      font-size: 1rem;
-      color: $uoc-corporate;
+      font-size: 0.9rem;
+      color: darken($uoc-masterbrand, 10%);
       position: absolute;
-      bottom: 0.5rem;
-      text-align: center;
-      font-weight: 200;
-      letter-spacing: 0.2rem;
-      font-size: 0.8rem;
+      bottom: -3rem;
+      right: 0.5rem;
+      width: 150px;
+      text-align: right;
+      text-align-last: right;
+      letter-spacing: 0.1rem;
     }
   }
 }
 
-// ------------------ RESPONSIVE FALLBACK ------------------
+// ------------------ FALLBACK FLEX ------------------
 
-// sin soporte grid en .page y .content
 @supports not (display: grid) {
   .page {
     display: flex;
@@ -344,10 +357,7 @@ html, body {
         margin-bottom: 1rem;
       }
 
-      h2 {
-        font-size: 1rem;
-      }
-
+      h2,
       p {
         font-size: 1rem;
       }
@@ -356,25 +366,21 @@ html, body {
     &__highlight-wrapper {
       width: 100%;
       height: auto;
+      aspect-ratio: unset;
       grid-column: unset;
       grid-row: unset;
-      aspect-ratio: unset;
       margin: 1rem 0;
       border-radius: $border-radius;
       padding: 1rem;
     }
 
     &__highlight {
+      position: relative;
       grid-column: unset;
       grid-row: unset;
-      position: relative;
 
-      &-title,
       &-text {
         position: relative;
-        top: auto;
-        left: auto;
-        transform: none;
         margin: 0.5rem 0;
       }
     }

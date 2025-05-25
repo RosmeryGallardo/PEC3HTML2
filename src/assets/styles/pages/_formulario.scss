@@ -1,58 +1,119 @@
-// Página de contacto
+// Página de contacto y calendario
 // @use '../base/variables';
 // @use '../base/mixins' as *;
+
 .contact {
+  padding: 2rem;
+
+  &__form {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: $uoc-masterbrand;
     padding: 2rem;
-  
-    &__form {
-      max-width: 600px;
-      margin: 0 auto;
-      background-color: #fff;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  
-      h1 {
-        text-align: center;
-        margin-bottom: 2rem;
-      }
-  
-      .form-group {
-        margin-bottom: 1.5rem;
-  
-        label {
-          font-size: 1rem;
-          margin-bottom: 0.5rem;
-          display: block;
-        }
-  
-        input,
-        textarea {
-          width: 100%;
-          padding: 1rem;
-          border-radius: 5px;
-          border: 1px solid #ccc;
-          font-size: 1rem;
-        }
-  
-        textarea {
-          min-height: 150px;
-        }
-      }
-  
-      button {
-        background-color: $uoc-corporate;
-        color: #fff;
-        padding: 1rem 2rem;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+
+      label {
         font-size: 1rem;
-  
-        &:hover {
-          background-color: darken($uoc-corporate, 10%);
-        }
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+      }
+
+      textarea {
+        min-height: 150px;
+      }
+    }
+
+    button {
+      background-color: $uoc-corporate;
+      color: #fff;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+
+      &:hover {
+        background-color: darken($uoc-corporate, 10%);
       }
     }
   }
-  
+}
+
+// Nueva sección calendario
+.calendar {
+  max-width: 900px;
+  margin: 2rem auto 4rem;
+  padding: 2rem;
+  background-color: lighten($uoc-masterbrand, 30%);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+  h1 {
+    text-align: center;
+    color: $uoc-corporate;
+    margin-bottom: 2rem;
+  }
+
+  &__item {
+    background-color: $uoc-bg;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    h2 {
+      color: $uoc-corporate;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: darken($uoc-masterbrand, 10%);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1rem;
+
+      li {
+        margin-bottom: 0.3rem;
+        font-weight: 600;
+        color: darken($uoc-masterbrand, 15%);
+      }
+    }
+
+    .btn--buy {
+      background-color: $uoc-corporate;
+      color: $uoc-bg;
+      padding: 0.5rem 1.2rem;
+      border-radius: 5px;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($uoc-corporate, 10%);
+      }
+    }
+  }
+}

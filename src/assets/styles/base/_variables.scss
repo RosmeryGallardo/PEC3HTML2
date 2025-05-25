@@ -5,11 +5,11 @@ $font-family-text: 'Roca One', sans-serif !default;
 $font-family-base: 'Oswald', sans-serif !default;
 
 // --- Colores UOC ---
-$uoc-corporate: #03588C !default;      // Azul corporativo principal
-$uoc-masterbrand: #A9CBB7 !default;    // Verde suave
-$uoc-bg: #F2F2F2 !default;             // Fondo claro
-$hover-color: #D9A566 !default;        // Color hover (naranja dorado)
-$overlay-opacity: 0.3 !default;        // Opacidad para overlays
+$uoc-corporate: #03588C !default;      
+$uoc-masterbrand: #A9CBB7 !default;    
+$uoc-bg: #F2F2F2 !default;             
+$hover-color: #D9A566 !default;      
+$overlay-opacity: 0.3 !default;        
 
 // --- Breakpoints / Media queries ---
 $breakpoints: (
@@ -24,7 +24,7 @@ $speaker-card-width: 100% !default;
 $speaker-card-height: 300px !default;
 $card-gap: 1rem !default;
 $background-color: #f9f9f9 !default;
-$border-radius: 9999px !default;       // Bordes redondeados tipo "pill"
+$border-radius: 9999px !default;       
 $box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !default;
 
 // --- Bootstrap Overrides ---
