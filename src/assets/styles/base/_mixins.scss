@@ -1,0 +1,87 @@
+// base/_mixins.scss
+@use "./variables" as vars;
+// Declaramos la variable para evitar cruce de variables. 
+// ------------------------------
+// MEDIA QUERY DINÁMICO (usa $breakpoints desde variables)
+// ------------------------------
+@mixin respond-to($breakpoint) {
+  @if map-has-key(vars.$breakpoints, $breakpoint) {
+    @media (min-width: map-get(vars.$breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "⚠️ Breakpoint '#{$breakpoint}' no existe en \$breakpoints.";
+  }
+}
+
+// ------------------------------
+// TRANSICIÓN SUAVE
+// ------------------------------
+@mixin transition($props, $duration: 0.3s, $timing: ease-in-out) {
+  transition: $props $duration $timing;
+}
+
+// ------------------------------
+// OVERLAY CON COLOR Y OPACIDAD
+// ------------------------------
+@mixin overlay($color, $opacity) {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(
+    red($color),
+    green($color),
+    blue($color),
+    $opacity
+  );
+  z-index: -1;
+}
+
+// ------------------------------
+// BOTÓN BÁSICO
+// ------------------------------
+@mixin button-base($bg-color, $text-color, $hover-bg-color) {
+  padding: 0.75rem 0.5rem;
+  background-color: $bg-color;
+  color: $text-color;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  @include transition(background-color);
+
+  &:hover {
+    background-color: $hover-bg-color;
+  }
+}
+
+// ------------------------------
+// LOGO RESPONSIVE
+// ------------------------------
+@mixin responsive-logo($small, $medium, $large) {
+  width: $small;
+
+  @include respond-to('tablet') {
+    width: $medium;
+  }
+
+  @include respond-to('desktop') {
+    width: $large;
+  }
+}
+
+// ------------------------------
+// TÍTULO RESPONSIVE
+// ------------------------------
+@mixin responsive-header-title($small, $medium, $large) {
+  font-size: $small;
+
+  @include respond-to('tablet') {
+    font-size: $medium;
+  }
+
+  @include respond-to('desktop') {
+    font-size: $large;
+  }
+}

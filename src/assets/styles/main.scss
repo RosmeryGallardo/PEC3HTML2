@@ -7,7 +7,10 @@
  * Import variables
  */
 
- @import "base/variables";
+@use 'base/variables' as *;
+@use 'base/mixins' as *;
+ @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+ 
 
 /**
  * Import npm dependencies
@@ -15,10 +18,24 @@
  * see commented examples below
  */
  @import "npm:@fortawesome/fontawesome-free/css/all.css";
+ @import "npm:bootstrap-icons/font/bootstrap-icons.css";
+ @import "../../../node_modules/boxicons/css/boxicons.min.css";
+
+
+
 // @import '~moment';//
 
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
+/**
+ * Import blocks
+ */
+@import "blocks/header";
+@import "blocks/footer";
+@import "pages/article";
+@import "pages/speakers";
+@import "pages/formulario";
+@import "bootstrap/scss/bootstrap";
 
 /**
  * Import layouts

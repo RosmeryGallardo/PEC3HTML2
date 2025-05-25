@@ -1,0 +1,34 @@
+// @use '../base/variables';
+.footer {
+  grid-area: footer;
+  background-color: $uoc-corporate;
+  color: $uoc-bg;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  p {
+    margin: 0;
+    font-weight: 400;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+
+    a {
+      color: $uoc-bg;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+
+      &:hover,
+      &:focus {
+        color: lighten($uoc-bg, 40%);
+      }
+    }
+  }
+}

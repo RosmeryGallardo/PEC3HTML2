@@ -4,27 +4,89 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
-    <!-- do not remove this line! -->
     <title>Jornadas de Economía Circular</title>
+    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
   </head>
-  <body>
-    <include src="./views/header.html"></include>
-
-    <main>
-      <section>
-        <h1 class="uoc-title">Hello, UOC!</h1>
-        <p>
-          This is a starter template for the Advanced HTML and CSS Tools courses
-          from the Master's Program in Multimedia Applications and the Master's
-          Program in Web App and Website Development at the Universitat Oberta de
-          Catalunya.
-        </p>
+  <body class="page">
+    
+    <!-- Header -->
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <img src="/src/assets/images/Logopage.png" alt="Logo" class="header__logo-img" />
+        </div>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item"><a href="article.html" class="header__link">Inicio</a></li>
+            <li class="header__item"><a href="speakers.html" class="header__link">Ponentes</a></li>
+            <li class="header__item"><a href="formulario.html" class="header__link">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+      <h1 class="header__title">Jornadas de Economía Circular</h1>
+    </header>
+    <main class="main">
+       <!-- Círculos con iconos-->
+      <section class="icons">
+        <div class="icons__circle"><i class="fas fa-recycle"></i></div>
+        <div class="icons__circle"><i class="fas fa-sync-alt"></i></div>
+        <div class="icons__circle"><i class="fas fa-arrow-down"></i></div>
       </section>
+      <section class="intro">
+        <div class="intro__content">
+          <h2 class="intro__title">¿Qué es la Economía Circular?</h2>
+          <p class="intro__description">
+            La economía circular es un modelo de producción y consumo que fomenta la reutilización, el reciclaje...
+          </p>
+          <button class="intro__btn">Inscribirse</button>
+        </div>
+      </section>
+      <section class="content">
+          <div class="content__card">
+            <i class="fas fa-city content__icon"></i>
+            <div class="content__card-inner">
+            <h2 class="content__title">Ciudades circulares</h2>
+            <p class="content__text">...</p>
+          </div>
+        </div>
+        <div class="content__card">
+          <i class="bx bx-globe content__icon"></i>
+          <div class="content__card-inner">
+            <h2 class="content__title">Moda circular</h2>
+            <p class="content__text">Contenido del artículo 3...</p>
+          </div>
+
+        </div>
+        <div class="content__card">
+          <i class="bx bx-bulb content__icon"></i>
+          <div class="content__card-inner">
+            <h2 class="content__title">Tecnología circular</h2>
+            <p class="content__text">Contenido del artículo 3...</p>
+          </div>
+        </div>
+
+        <div class="content__highlight-wrapper">
+          <i class="bx bx-sync"></i>
+          <div class="content__highlight-wrapper-inner-circle">
+            <h2 class="content__highlight-title">Economía Circular</h2>
+          </div>
+        </div>
+        <div class="content__highlight">
+          <p class="content__highlight-text">
+            Participa en nuestros talleres y sé parte del cambio circular
+          </p>
+        </div>
+      <!-- Círculos de fondo -->
+      <div class="content__circle-bg"></div>
+      <div class="content__circle-bg content__circle-bg--alt"></div>
+      <div class="content__circle-bg content__circle-bg--alt2"></div>
+    </section>
+
     </main>
 
-    <include src="./views/footer.html"></include>
+    <!-- Footer -->
+    <include src="./views/blocks/footer.html"></include>
 
     <script type="module" src="./assets/scripts/main.js"></script>
-    <!-- do not remove this line! -->
   </body>
 </html>

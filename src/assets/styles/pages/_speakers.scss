@@ -1,0 +1,47 @@
+// @use '../base/variables';
+// @use '../base/mixins' as *;
+.participants {
+  text-align: center;
+  padding: 2rem;
+
+  &__intro {
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  &__item {
+    flex: 1 1 250px;
+    max-width: 250px;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+      border-radius: 8px;
+    }
+
+    h2 {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+
+    p {
+      color: #555;
+      margin-top: 0.5rem;
+    }
+  }
+}

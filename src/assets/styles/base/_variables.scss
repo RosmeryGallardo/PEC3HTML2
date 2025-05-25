@@ -1,12 +1,36 @@
-@use "sass:color";
+// base/_variables.scss
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
+// --- Tipografías ---
+$font-family-text: 'Roca One', sans-serif !default;
+$font-family-base: 'Oswald', sans-serif !default;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+// --- Colores UOC ---
+$uoc-corporate: #03588C !default;      // Azul corporativo principal
+$uoc-masterbrand: #A9CBB7 !default;    // Verde suave
+$uoc-bg: #F2F2F2 !default;             // Fondo claro
+$hover-color: #D9A566 !default;        // Color hover (naranja dorado)
+$overlay-opacity: 0.3 !default;        // Opacidad para overlays
 
-$mqMinWidth: 420px;
+// --- Breakpoints / Media queries ---
+$breakpoints: (
+  'mobile': 420px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'wide': 1440px
+) !default;          
+
+// --- Dimensiones y Layout ---
+$speaker-card-width: 100% !default;
+$speaker-card-height: 300px !default;
+$card-gap: 1rem !default;
+$background-color: #f9f9f9 !default;
+$border-radius: 9999px !default;       // Bordes redondeados tipo "pill"
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !default;
+
+// --- Bootstrap Overrides ---
+$primary: $uoc-corporate !default;
+$body-bg: $uoc-bg !default;
+$body-color: #333 !default;
+$btn-border-radius: $border-radius !default;
+$box-shadow-sm: $box-shadow !default;
+$border-radius: $border-radius !default;

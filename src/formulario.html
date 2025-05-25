@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/styles/main.scss" />
+  <title>Formulario de Contacto</title>
+</head>
+<body>
+    <include src="./views/blocks/header.html"></include>
+  <main class="contact">
+    <section class="contact__form">
+      <h1>Contáctanos</h1>
+      <form action="https://your-netlify-url.com" method="POST">
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
