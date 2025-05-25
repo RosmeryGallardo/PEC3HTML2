@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang=es><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=stylesheet href=uoc-boilerplate.40ba4f6c.css><title>Detalle de Ponencias, Ubicación y Contacto</title><link href=https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css rel=stylesheet><link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css rel=stylesheet><link rel=stylesheet href=https://unpkg.com/leaflet@1.9.4/dist/leaflet.css><style>#map{border-radius:8px;width:100%;height:350px;margin-top:1rem;box-shadow:0 4px 8px #0000001a}.map-search{gap:.5rem;margin-top:1rem;display:flex}.map-search input[type=text]{border:1px solid #ccc;border-radius:5px;flex-grow:1;padding:.5rem;font-size:1rem}.map-search button{color:#fff;cursor:pointer;background-color:#007bff;border:none;border-radius:5px;padding:.5rem 1rem;font-weight:600}.map-search button:hover{background-color:#0056b3}</style><body>
+  
+    <header class=header>
+      <div class=header__container>
+        <div class=header__logo>
+         <a href=index.html> <img src=Logopage.529fb36e.png alt=Logo class=header__logo-img></a>
+        </div>
+        <nav class=header__nav>
+          <ul class=header__list>
+            <li class=header__item><a href=article.html class=header__link>Articulo</a></li>
+            <li class=header__item><a href=speakers.html class=header__link>Ponentes</a></li>
+            <li class=header__item><a href=formulario.html class=header__link>Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+      <h1 class=header__title>Jornadas de Economía Circular</h1>
+    </header>
+
+
+  <main class=event-page>
+
+    
+    <section class=calendar>
+      <h1>Próximas Charlas</h1>
+
+      <article class=calendar__item>
+        <h2 class=calendar__title>
+          <i class="calendar__icon fa-lightbulb fa-solid" aria-hidden=true></i>
+          Innovación Tecnológica
+        </h2>
+        <p class=calendar__description>Exploraremos las últimas tendencias en innovación tecnológica aplicada a la educación.</p>
+        <ul class=calendar__details>
+          <li><strong>Precio:</strong> $50</li>
+          <li><strong>Lugar:</strong> Auditorio Principal</li>
+          <li><strong>Fecha:</strong> 15 de Junio de 2025</li>
+        </ul>
+        <button class="btn btn--buy" type=button onclick="alert('Compra realizada para Ponencia 1')">Comprar Entrada</button>
+      </article>
+
+      <article class=calendar__item>
+        <h2 class=calendar__title>
+          <i class="calendar__icon fa-robot fa-solid" aria-hidden=true></i>
+         Inteligencia Artificial en la Educación
+        </h2>
+        <p class=calendar__description>Un análisis profundo sobre cómo la IA está transformando los métodos de enseñanza.</p>
+        <ul class=calendar__details>
+          <li><strong>Precio:</strong> $70</li>
+          <li><strong>Lugar:</strong> Sala B</li>
+          <li><strong>Fecha:</strong> 16 de Junio de 2025</li>
+        </ul>
+        <button class="btn btn--buy" type=button onclick="alert('Compra realizada para Ponencia 2')">Comprar Entrada</button>
+      </article>
+
+    </section>
+
+    
+    <section class=location>
+      <h1>Dónde Encontrarnos</h1>
+      <p>Usa el buscador para encontrar nuestra ubicación en el mapa:</p>
+      <div class=map-search>
+        <input id=searchInput placeholder="Buscar dirección, ciudad, lugar...">
+        <button id=searchBtn>Buscar</button>
+      </div>
+      <div id=map></div>
+    </section>
+
+    
+    <section class=contact__form>
+      <h1>Contáctanos</h1>
+      <form action=https://your-netlify-url.com method=post>
+        <div class=form-group>
+          <label for=name>Nombre</label>
+          <input id=name name=name required>
+        </div>
+        <div class=form-group>
+          <label for=email>Correo electrónico</label>
+          <input type=email id=email name=email required>
+        </div>
+        <div class=form-group>
+          <label for=message>Mensaje</label>
+          <textarea id=message name=message required></textarea>
+        </div>
+        <button>Enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+  
+  <script src=https://unpkg.com/leaflet@1.9.4/dist/leaflet.js></script>
+  <script>let map=L.map("map").setView([41.3851,2.1734],13);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:"© OpenStreetMap"}).addTo(map);let marker=L.marker([41.3851,2.1734]).addTo(map).bindPopup("Nuestra ubicación").openPopup();async function searchLocation(e){let a=`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(e)}`,t=await fetch(a);return t.ok?await t.json():(alert("Error en la búsqueda"),null)}document.getElementById("searchBtn").addEventListener("click",async()=>{let e=document.getElementById("searchInput").value.trim();if(!e)return void alert("Por favor, escribe una dirección o lugar para buscar.");let a=await searchLocation(e);if(a&&a.length>0){let e=a[0],t=parseFloat(e.lat),n=parseFloat(e.lon);map.setView([t,n],15),marker.setLatLng([t,n]).setPopupContent(e.display_name).openPopup()}else alert("No se encontraron resultados para esa búsqueda.")});</script>
+    <footer class=footer>
+  <p>© 2025 Jornadas de economía circular</p>
+  <div class=footer__socials>
+    <a href=https://facebook.com target=_blank aria-label=Facebook rel="noopener noreferrer">
+      <i class="fa-facebook-f fab"></i>
+    </a>
+    <a href=https://twitter.com target=_blank aria-label=Twitter rel="noopener noreferrer">
+      <i class="fa-twitter fab"></i>
+    </a>
+    <a href=https://instagram.com target=_blank aria-label=Instagram rel="noopener noreferrer">
+      <i class="fa-instagram fab"></i>
+    </a>
+    <a href=https://linkedin.com target=_blank aria-label=LinkedIn rel="noopener noreferrer">
+      <i class="fa-linkedin-in fab"></i>
+    </a>
+  </div>
+</footer>
+
+    <script type=module src=uoc-boilerplate.d60dffda.js></script>
+
+
