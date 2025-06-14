@@ -9,7 +9,7 @@
 
 @use 'base/variables' as *;
 @use 'base/mixins' as *;
- @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
  
 
 /**
@@ -18,9 +18,7 @@
  * see commented examples below
  */
  @import "npm:@fortawesome/fontawesome-free/css/all.css";
- @import "npm:bootstrap-icons/font/bootstrap-icons.css";
- @import "../../../node_modules/boxicons/css/boxicons.min.css";
-
+ @import "tailwindcss";
 
 
 // @import '~moment';//
@@ -32,10 +30,7 @@
  */
 @import "blocks/header";
 @import "blocks/footer";
-@import "pages/article";
 @import "pages/speakers";
-@import "pages/formulario";
-@import "bootstrap/scss/bootstrap";
 
 /**
  * Import layouts
