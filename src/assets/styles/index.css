@@ -46,3 +46,7 @@
 .text-hover-color {
   color: var(--color-hoverColor);
 }
+.font-family-text {
+  font-family: var(--font-family-text);
+}
+
