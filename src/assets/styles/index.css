@@ -3,16 +3,16 @@
 /* Define variables CSS dentro del tema tailwind */
 @theme {
   /* Colores UOC */
-  --color-uocCorporate: #03588C;
+  --color-uocCorporate: #03588c;
   --color-uocBac: #101828;
-  --color-uocMasterbrand: #A9CBB7;
-  --color-uocbg: #F2F2F2;
-  --color-hoverColor: #3056D3;
+  --color-uocMasterbrand: #a9cbb7;
+  --color-uocbg: #f2f2f2;
+  --color-hoverColor: #3056d3;
   --color-overlayOpacity: 0.4;
 
   /* Tipografías */
-  --font-family-text: 'Roca One', sans-serif;
-  --font-family-base: 'Oswald', sans-serif;
+  --font-family-text: "Roca One", sans-serif;
+  --font-family-base: "Oswald", sans-serif;
 
   /*Remplazamos los breakpoints manuales por los determinados*/
 
@@ -23,12 +23,15 @@
   --background-color: #f9f9f9;
   --border-radius: 9999px;
   --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
 }
 
 /* Opcional: Utilidades CSS para usar las variables en Tailwind */
 .bg-gradient-uoc {
-  background: linear-gradient(to top right, var(--color-uocMasterbrand), var(--color-uocCorporate));
+  background: linear-gradient(
+    to top right,
+    var(--color-uocMasterbrand),
+    var(--color-uocCorporate)
+  );
 }
 
 .text-uoc-corporate {
@@ -46,7 +49,26 @@
 .text-hover-color {
   color: var(--color-hoverColor);
 }
-.font-family-text {
+.font-text {
   font-family: var(--font-family-text);
 }
 
+.font-base {
+  font-family: var(--font-family-base);
+}
+
+/*Usamos para pues  @apply solo reconoce con utilidades Tailwind estándar después añadimos clases personalizadas para colores*/
+.btn-primary {
+  @apply px-6 py-2 rounded-full text-uocbg transition;
+  background-color: var(--color-uocCorporate);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-hoverColor);
+}
+
+.icon-circle {
+  @apply w-12 h-12 rounded-full flex items-center justify-center;
+  background-color: var(--color-uocMasterbrand);
+  color: var(--color-uocCorporate);
+}

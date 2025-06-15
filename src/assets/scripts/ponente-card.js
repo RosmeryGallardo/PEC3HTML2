@@ -1,4 +1,4 @@
-import { ponenteTemplate } from './ponente-card-template.js';
+import { ponenteTemplate } from "./ponente-card-template.js";
 
 const ponentes = [
   {
@@ -24,23 +24,22 @@ const ponentes = [
 ];
 
 function renderPonentes() {
-  const container = document.getElementById('ponentes-container');
+  const container = document.getElementById("ponentes-container");
   if (!container) return;
 
-  ponentes.forEach(ponente => {
+  ponentes.forEach((ponente) => {
     const html = ponenteTemplate
       .replace(/{{name}}/g, ponente.name)
       .replace(/{{role}}/g, ponente.role)
       .replace(/{{image}}/g, ponente.image);
 
-    const div = document.createElement('div');
+    const div = document.createElement("div");
     div.innerHTML = html;
     container.appendChild(div.firstElementChild);
   });
 }
 
 renderPonentes();
-
 
 //Card de ponentes
 // src/data/ponentes.js

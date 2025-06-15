@@ -577,7 +577,7 @@
     display: inline-flex;
   }
 
-  .aspect-1097\/845 {
+  .aspect-1097\/845, .aspect-\[1097\/845\] {
     aspect-ratio: 1097 / 845;
   }
 
@@ -622,6 +622,10 @@
 
   .h-15 {
     height: calc(var(--spacing) * 15);
+  }
+
+  .h-full {
+    height: 100%;
   }
 
   .w-5 {
@@ -1088,6 +1092,10 @@
     opacity: .3;
   }
 
+  .opacity-\[var\(--color-overlayOpacity\)\] {
+    opacity: var(--color-overlayOpacity);
+  }
+
   .shadow-xs {
     --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, #0000000d);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -1259,11 +1267,6 @@
       padding: calc(var(--spacing) * 7);
     }
 
-    .md\:text-base {
-      font-size: var(--text-base);
-      line-height: var(--tw-leading, var(--text-base--line-height));
-    }
-
     .md\:text-sm {
       font-size: var(--text-sm);
       line-height: var(--tw-leading, var(--text-sm--line-height));
@@ -1409,8 +1412,38 @@
   color: var(--color-hoverColor);
 }
 
-.font-family-text {
+.font-text {
   font-family: var(--font-family-text);
+}
+
+.font-base {
+  font-family: var(--font-family-base);
+}
+
+.btn-primary {
+  padding-inline: calc(var(--spacing) * 6);
+  padding-block: calc(var(--spacing) * 2);
+  color: var(--color-uocbg);
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  background-color: var(--color-uocCorporate);
+  border-radius: 3.40282e38px;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-hoverColor);
+}
+
+.icon-circle {
+  height: calc(var(--spacing) * 12);
+  width: calc(var(--spacing) * 12);
+  background-color: var(--color-uocMasterbrand);
+  color: var(--color-uocCorporate);
+  border-radius: 3.40282e38px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 @property --tw-space-y-reverse {
