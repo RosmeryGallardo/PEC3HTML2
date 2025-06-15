@@ -577,7 +577,7 @@
     display: inline-flex;
   }
 
-  .aspect-1097\/845, .aspect-\[1097\/845\] {
+  .aspect-\[1097\/845\] {
     aspect-ratio: 1097 / 845;
   }
 
@@ -589,11 +589,6 @@
   .size-6 {
     width: calc(var(--spacing) * 6);
     height: calc(var(--spacing) * 6);
-  }
-
-  .size-full {
-    width: 100%;
-    height: 100%;
   }
 
   .h-5 {
@@ -835,10 +830,6 @@
     background-color: var(--color-gray-900);
   }
 
-  .bg-uocBac {
-    background-color: var(--color-uocBac);
-  }
-
   .bg-uocCorporate {
     background-color: var(--color-uocCorporate);
   }
@@ -1026,16 +1017,6 @@
     line-height: var(--leading-relaxed);
   }
 
-  .font-\[var\(--font-family-base\)\] {
-    --tw-font-weight: var(--font-family-base);
-    font-weight: var(--font-family-base);
-  }
-
-  .font-\[var\(--font-family-text\)\] {
-    --tw-font-weight: var(--font-family-text);
-    font-weight: var(--font-family-text);
-  }
-
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
@@ -1054,14 +1035,6 @@
   .tracking-tight {
     --tw-tracking: var(--tracking-tight);
     letter-spacing: var(--tracking-tight);
-  }
-
-  .text-\[var\(--color-uocMasterbrand\)\] {
-    color: var(--color-uocMasterbrand);
-  }
-
-  .text-\[var\(--color-uocbg\)\] {
-    color: var(--color-uocbg);
   }
 
   .text-blue-600 {
@@ -1124,10 +1097,6 @@
   }
 
   @media (hover: hover) {
-    .hover\:bg-\[var\(--color-hoverColor\)\]:hover {
-      background-color: var(--color-hoverColor);
-    }
-
     .hover\:bg-gray-50:hover {
       background-color: var(--color-gray-50);
     }
