@@ -3,74 +3,181 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <!--<link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />-->
     <title>Jornadas de Economía Circular</title>
-    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link href="./assets/styles/index.css" type="text/css" rel="stylesheet" />
   </head>
-  <body class="page">
+<body class="bg-uoc-bg font-[var(--font-family-text)]">
     <include src="./views/blocks/header.html"></include>
 
-    <main class="main">
+    <div class="relative isolate overflow-hidden py-24 sm:py-32 text-white">
+      <img src="/src/assets/images/Poster.jpg" alt="" class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center" />
 
-       <!-- Círculos con iconos-->
-      <section class="icons">
-        <div class="icons__circle"><i class="fas fa-recycle"></i></div>
-        <div class="icons__circle"><i class="fas fa-sync-alt"></i></div>
-        <div class="icons__circle"><i class="fas fa-arrow-down"></i></div>
-      </section>
-      <section class="intro">
-        <div class="intro__content">
-          <h2 class="intro__title">¿Qué es la Economía Circular?</h2>
-          <p class="intro__description">
-            La economía circular es un modelo de producción y consumo que fomenta la reutilización, el reciclaje...
-          </p>
-          <button class="intro__btn">Inscribirse</button>
-        </div>
-          <div class="content__highlight-text">
-            <p>
-              Participa en nuestros talleres y sé parte del cambio circular
-            </p>
-        </div>
-      </section>
-      <section class="content">
-          <div class="content__card">
-            <i class="fas fa-city content__icon"></i>
-            <div class="content__card-inner">
-            <h2 class="content__title">Ciudades circulares</h2>
-          </div>
-          <p class="content__text">Exploraremos cómo las ciudades están adoptando modelos sostenibles, reutilización de recursos y estrategias urbanas circulares.</p>
-        </div>
-        <div class="content__card">
-          <i class="bx bx-globe content__icon"></i>
-          <div class="content__card-inner">
-            <h2 class="content__title">Moda circular</h2>
-          </div>
-            <p class="content__text">Se abordarán prácticas en diseño, producción y consumo textil que reducen el impacto ambiental del sector de la moda.</p>
-        </div>
-        <div class="content__card">
-          <i class="bx bx-bulb content__icon"></i>
-          <div class="content__card-inner">
-            <h2 class="content__title">Tecnología circular</h2>
-          </div>
-          <p class="content__text">Análisis de la gestión de residuos electrónicos, ecodiseño y tecnología aplicada a la optimización de recursos.</p>
+    <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
+    <div
+      class="aspect-1097/845 w-[137.125px] opacity-[var(--color-overlayOpacity: 0.12;)] bg-gradient-uoc"
+      style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+    </div>
+
+    </div>
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:mx-0">
+          <h2 class="text-5xl font-semibold tracking-tight sm:text-7xl font-[var(--font-family-base)]">
+            Jornadas de Economía Circular
+          </h2>
+          <p class="mt-8 text-lg font-medium text-uocCorporate sm:text-xl/8">
+            Promueve un consumo sostenible que minimiza el impacto ambiental y fomenta la innovación.</p>
         </div>
 
-        <div class="content__highlight-wrapper">
-          <i class="bx bx-sync"></i>
-          <div class="content__highlight-wrapper-inner-circle">
-            <h2 class="content__highlight-title">Economía Circular</h2>
-          </div>
+       <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none bg-[rgba(3,88,140,0.7)] p-6 rounded-lg">
+        <div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold sm:grid-cols-2 md:flex lg:gap-x-10">
+          <a href="#" class="text-[var(--color-uocbg)] hover:underline">Programa de actividades &rarr;</a>
+          <a href="#" class="text-[var(--color-uocbg)] hover:underline">Mesa redonda: retos circulares &rarr;</a>
+          <a href="#" class="text-[var(--color-uocbg)] hover:underline">Ponencias destacadas &rarr;</a>
+          <a href="#" class="text-[var(--color-uocbg)] hover:underline">Conoce a los ponentes &rarr;</a>
         </div>
-      <!-- Círculos de fondo -->
-      <div class="content__circle-bg"></div>
-      <div class="content__circle-bg content__circle-bg--alt"></div>
-      <div class="content__circle-bg content__circle-bg--alt2"></div>
-    </section>
+
+        <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="flex flex-col-reverse gap-1">
+            <dt class="text-base/7 text-[var(--color-uocMasterbrand)]">Ponencias impartidas</dt>
+            <dd class="text-4xl font-semibold tracking-tight text-white">12</dd>
+          </div>
+          <div class="flex flex-col-reverse gap-1">
+            <dt class="text-base/7 text-[var(--color-uocMasterbrand)]">Asistentes inscritos</dt>
+            <dd class="text-4xl font-semibold tracking-tight text-white">300+</dd>
+          </div>
+          <div class="flex flex-col-reverse gap-1">
+            <dt class="text-base/7 text-[var(--color-uocMasterbrand)]">Expertos invitados</dt>
+            <dd class="text-4xl font-semibold tracking-tight text-white">40</dd>
+          </div>
+          <div class="flex flex-col-reverse gap-1">
+            <dt class="text-base/7 text-[var(--color-uocMasterbrand)]">Horas de contenido</dt>
+            <dd class="text-4xl font-semibold tracking-tight text-white">122</dd>
+          </div>
+        </dl>
+      </div>
+            </div>
+          </div>
+
+    <main class="font-[var(--font-family-text)]">
+      <section class="icons flex justify-center gap-6 py-10 ">
+        <div class="w-12 h-12 bg-uoc-masterbrand rounded-full flex items-center justify-center ">
+          <i class="fas fa-recycle text-uoc-corporate"></i>
+        </div>
+        <div class="w-12 h-12 bg-uoc-masterbrand rounded-full flex items-center justify-center">
+          <i class="fas fa-leaf text-uoc-corporate"></i>
+        </div>
+        <div class="w-12 h-12 bg-uoc-masterbrand rounded-full flex items-center justify-center ">
+          <i class="fas fa-sync-alt text-uoc-corporate"></i>
+        </div>
+      </section>
+
+      <section class="px-6 py-12 bg-white text-uoc-corporate">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold font-[var(--font-family-base)]">¿Qué es la Economía Circular?</h2>
+          <p class="mt-4 text-lg">La economía circular es un modelo de producción y consumo que fomenta la reutilización, el reciclaje...</p>
+          <button class="mt-6 px-6 py-2 bg-uoc-corporate text-white rounded-full hover:bg-[var(--color-hoverColor)] transition">Inscribirse</button>
+        </div>
+      </section>
+
+<section class="relative isolate overflow-hidden bg-uocBac py-24 sm:py-32">
+<!-- Card init -->
+<section class="bg-gray-2 pb-10 pt-20 lg:pb-20 lg:pt-[120px] dark:bg-dark">
+  <div class="container mx-auto">
+    <div class="-mx-4 flex flex-wrap justify-center">
+      <div class="w-full px-4 md:w-1/2 xl:w-1/4">
+  <div class="mb-10 overflow-hidden rounded-lg bg-white shadow-1 duration-300 hover:shadow-3 dark:bg-dark-2 dark:shadow-card dark:hover:shadow-3">
+
+    <div class="flex justify-center pt-8 text-uoc-masterbrand text-6xl">
+      <i class="fas fa-city text-uocCorporate"></i> 
+    </div>
+    <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
+      <h3>
+        <a href="javascript:void(0)"
+          class="mb-4 block text-xl font-semibold text-dark hover:text-primary sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] dark:text-white">
+          Ciudades circulares
+        </a>
+      </h3>
+      <p class="mb-7 text-base leading-relaxed text-body-color dark:text-dark-6">
+        Exploramos modelos sostenibles, reutilización de recursos y estrategias urbanas circulares.
+      </p>
+
+      <a href="javascript:void(0)"
+        class="inline-block rounded-full border border-gray-3 px-7 py-2 text-base font-medium text-body-color transition hover:border-primary hover:bg-primary hover:text-hoverColor dark:border-dark-3 dark:text-dark-6">
+        Ver más
+      </a>
+    </div>
+  </div>
+</div>
+<!-- Init card: Usamos posthtml-include pero como requerimos reutilizar estas cards usamos Js para pasar parámetros -->
+
+<include src="views/blocks/card.html"></include>
+
+
+<div class="w-full px-4 md:w-1/2 xl:w-1/4">
+  <div
+    class="mb-10 overflow-hidden rounded-lg bg-white shadow-1 duration-300 hover:shadow-3 dark:bg-dark-2 dark:shadow-card dark:hover:shadow-3">
+
+    <div class="flex justify-center pt-8 text-uoc-masterbrand text-6xl">
+      <i class="fas fa-microchip text-uocCorporate"></i> 
+    </div>
+    <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
+      <h3>
+        <a href="javascript:void(0)"
+          class="mb-4 block text-xl font-semibold text-dark hover:text-primary sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] dark:text-white">
+          Tecnología circular
+        </a>
+      </h3>
+      <p class="mb-7 text-base leading-relaxed text-body-color dark:text-dark-6">
+        Gestión de residuos electrónicos, ecodiseño y tecnología aplicada a optimizar recursos.
+      </p>
+
+      <a href="javascript:void(0)"
+        class="inline-block rounded-full border border-gray-3 px-7 py-2 text-base font-medium text-body-color transition hover:border-primary hover:bg-primary hover:text-hoverColor dark:border-dark-3 dark:text-dark-6">
+        Ver más
+      </a>
+    </div>
+  </div>
+</div>
+<!-- Finish Card -->
+
+<div class="w-full px-4 md:w-1/2 xl:w-1/4">
+  <div
+    class="mb-10 overflow-hidden rounded-lg bg-white shadow-1 duration-300 hover:shadow-3 dark:bg-dark-2 dark:shadow-card dark:hover:shadow-3">
+    <div class="flex justify-center pt-8 text-uoc-masterbrand text-6xl">
+      <i class="fas fa-coins text-uocCorporate"></i>
+    </div>
+    <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
+      <h3>
+        <a href="javascript:void(0)"
+          class="mb-4 block text-xl font-semibold text-dark hover:text-primary sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] dark:text-white">
+          Economía Circular
+        </a>
+      </h3>
+      <p class="mb-7 text-base leading-relaxed text-body-color dark:text-dark-6">
+        Uso eficiente y regenerativo de recursos económicos para un sistema sostenible.
+      </p>
+
+      <a href="javascript:void(0)"
+        class="inline-block rounded-full border border-gray-3 px-7 py-2 text-base font-medium text-body-color transition hover:border-primary hover:bg-primary hover:text-hoverColor dark:border-dark-3 dark:text-dark-6">
+        Ver más
+      </a>
+    </div>
+  </div>
+</div>
+  <div class="mt-12 flex justify-center gap-4">
+    <div class="w-6 h-6 bg-white rounded-full opacity-30"></div>
+    <div class="w-6 h-6 bg-white rounded-full opacity-30"></div>
+    <div class="w-6 h-6 bg-white rounded-full opacity-30"></div>
+  </div>
+</section>
 
     </main>
-
     <!-- Footer -->
     <include src="./views/blocks/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script>
+    <!--<script type="module" src="./assets/scripts/main.js"></script>-->
   </body>
 </html>

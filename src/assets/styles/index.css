@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/* Define variables CSS dentro del tema tailwind */
+@theme {
+  /* Colores UOC */
+  --color-uocCorporate: #03588C;
+  --color-uocBac: #101828;
+  --color-uocMasterbrand: #A9CBB7;
+  --color-uocbg: #F2F2F2;
+  --color-hoverColor: #3056D3;
+  --color-overlayOpacity: 0.4;
+
+  /* Tipografías */
+  --font-family-text: 'Roca One', sans-serif;
+  --font-family-base: 'Oswald', sans-serif;
+
+  /*Remplazamos los breakpoints manuales por los determinados*/
+
+  /* Dimensiones y Layout */
+  --speaker-card-width: 100%;
+  --speaker-card-height: 300px;
+  --card-gap: 1rem;
+  --background-color: #f9f9f9;
+  --border-radius: 9999px;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Opcional: Utilidades CSS para usar las variables en Tailwind */
+.bg-gradient-uoc {
+  background: linear-gradient(to top right, var(--color-uocMasterbrand), var(--color-uocCorporate));
+}
+
+.text-uoc-corporate {
+  color: var(--color-uocCorporate);
+}
+.bg-uoc-corporate {
+  background-color: var(--color-uocCorporate);
+}
+.bg-uoc-masterbrand {
+  background-color: var(--color-uocMasterbrand);
+}
+.bg-uoc-bg {
+  background-color: var(--color-uocbg);
+}
+.text-hover-color {
+  color: var(--color-hoverColor);
+}

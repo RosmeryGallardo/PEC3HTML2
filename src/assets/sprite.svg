@@ -1,0 +1,15 @@
+<body class="bg-uoc-bg text-white"> 
+<header class="header p-6 text-center">
+  <h1 class="header__title text-3xl font-bold">Jornadas de Economía Circular</h1>
+</header>
+
+<main class="main container mx-auto p-6">
+</main>
+
+<footer class="footer bg-gray-900 py-6 flex justify-center">
+  <svg class="footer__icon w-7 h-7 fill-current text-blue-600 hover:text-blue-400 cursor-pointer" aria-label="Facebook">
+    <use href="./assets/sprite.svg#icon-facebook"></use>
+  </svg>
+</footer>
+
+</body>

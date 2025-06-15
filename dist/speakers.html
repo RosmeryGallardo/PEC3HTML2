@@ -1,0 +1,552 @@
+<!DOCTYPE html><html lang="es"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/uoc-boilerplate.f7fa0e17.css" type="text/css" rel="stylesheet">
+  <title>Participantes - Jornadas de Economía Circular</title>
+</head>
+<body>
+    <!-- Header -->
+    <!-- <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+         <a href="index.html"> <img src="/src/assets/images/Logopage.png" alt="Logo" class="header__logo-img"/></a>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item"><a href="speakers.html" class="header__link">Ponentes</a></li>
+          </ul>
+        </nav>
+      </div>
+      <h1 class="header__title">Jornadas de Economía Circular</h1>
+    </header> -->
+<header class="bg-uocMasterbrand">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <div class="flex lg:flex-1">
+      <a href="/index.html" class="-m-1.5 p-1.5">
+        <span class="sr-only">Your Company</span>
+        <img class="h-15 w-auto" src="/Logopage.163ab661.png" alt="">
+      </a>
+    </div>
+    <div class="flex lg:hidden">
+      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+        <span class="sr-only">Open main menu</span>
+        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12">
+      <a href="#" class="text-base font-family-base text-uocbg hover:text-hoverColor transition-colors duration-200r">Artículo</a>
+      <a href="/speakers.html" class="text-base font-family-base text-uocbg hover:text-hoverColor transition-colors duration-200">Ponentes</a>
+      <a href="#" class="text-base font-family-base text-uocbg hover:text-hoverColor transition-colors duration-200">Contacto</a>
+    </div>
+    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+      <a href="#" class="flex-none rounded-full bg-uocCorporate px-2.5 py-1 text-sm font-semibold text-white shadow-xs hover:bg-hoverColor">Log in <span aria-hidden="true">→</span></a>
+    </div>
+  </nav>
+  <!-- Mobile menu, show/hide based on menu open state. -->
+  <div class="lg:hidden" role="dialog" aria-modal="true">
+    <!-- Background backdrop, show/hide based on slide-over state. -->
+    <div class="fixed inset-0 z-50"></div>
+    <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+      <div class="flex items-center justify-between">
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">Your Company</span>
+          <img class="h-8 w-auto" src="/Logopage.163ab661.png" alt="">
+        </a>
+        <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+          <span class="sr-only">Close menu</span>
+          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="mt-6 flow-root">
+        <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="space-y-2 py-6">
+            <div class="-mx-3">
+              <button type="button" class="flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false">
+                Product
+                <!--
+                  Expand/collapse icon, toggle classes based on menu open state.
+
+                  Open: "rotate-180", Closed: ""
+                -->
+                <svg class="size-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"></path>
+                </svg>
+              </button>
+            </div>
+            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-uocCorporate hover:bg-hoverColor">Artículo</a>
+            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-uocCorporate hover:bg-hoverColor">Ponentes</a>
+            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-uocCorporate hover:bg-hoverColor">Contacto</a>
+          </div>
+          <div class="py-6">
+            <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log in</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <main class="participants">
+    <!-- <section class="participants__intro">
+      <h1>Participantes en las Jornadas</h1>
+      <p> Las Jornadas de Economía Circular reúnen a profesionales destacados del ámbito ambiental, académico y empresarial . A través de conferencias, mesas redondas y casos prácticos, exploraremos cómo la economía circular puede transformar industrias, reducir residuos y fomentar un futuro responsable.
+          Conoce a nuestros expertos que estarán en nuestras jornadas.
+      </p>
+    </section>
+
+    <section class="participants__list">
+      <div class="participants__item">
+        <img src="/src/assets/images/ponente2.png" alt="Juan Pérez" />
+        <h2>Juan Pérez</h2>
+        <p>Apasionado por la ingeniería ambiental, Juan ha liderado proyectos de reciclaje industrial en América Latina durante más de 10 años..</p>
+      </div>
+      <div class="participants__item">
+        <img src="/src/assets/images/ponente1.png" alt="Ana López" />
+        <h2>Ana López</h2>
+        <p>Consultora en sostenibilidad con experiencia internacional, Ana ha trabajado con empresas para implementar modelos de economía circular y moda reciclable</p>
+      </div>
+      <div class="participants__item">
+        <img src="/src/assets/images/ponente3.png" alt="Laura García" />
+        <h2>Laura García</h2>
+        <p>Investigadora en nuevas tecnologías de reciclaje en una universidad europea, Laura combina ciencia y compromiso social.</p>
+      </div>
+      <div class="participants__item">
+        <img src="/src/assets/images/Ponente4.png" alt="Sofía Martínez" />
+        <h2>Sofía Martínez</h2>
+        <p>CEO de una startup dedicada al reciclaje de plásticos, Sofía ha ganado premios por innovación sostenible.</p>
+      </div>
+      <div class="participants__item">
+        <img src="/src/assets/images/Ponente5.png" alt="Pedor Ramirez" />
+        <h2>Pedro Ramírez</h2>
+        <p>Diseñador industrial enfocado en productos circulares, Pedro ha trabajado en proyectos que reducen residuos desde el diseño.</p>
+      </div>
+      <div class="participants__item">
+        <img src="/src/assets/images/Ponente6.png" alt="Carlos Ruiz" />
+        <h2>Carlos Ruiz</h2>
+        <p>Economista ambiental y autor de varios libros sobre sostenibilidad. Carlos ha asesorado a gobiernos en políticas verdes. </p>
+      </div>
+    </section>-->
+    <!-- ====== Team Section Start -->
+<section class="pb-10 pt-20 lg:pb-20 lg:pt-[120px] dark:bg-dark">
+  <div class="container mx-auto">
+    <div class="-mx-4 flex flex-wrap">
+      <div class="w-full px-4">
+        <div class="mx-auto mb-[60px] max-w-[510px] text-center">
+          <span class="mb-2 block text-lg font-semibold text-primary">
+            Our Team
+          </span>
+          <h2 class="mb-3 text-3xl font-bold leading-[1.2] text-dark sm:text-4xl md:text-[40px] dark:text-white">
+            Our Awesome Team
+          </h2>
+          <p class="text-base text-body-color dark:text-dark-6">
+            There are many variations of passages of Lorem Ipsum available
+            but the majority have suffered alteration in some form.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section class="pb-10 pt-20 lg:pb-20 lg:pt-[120px] dark:bg-dark">
+    <div class="-mx-4 flex flex-wrap justify-center">
+      <!-- Ponente 1 -->
+      <div class="w-full px-4 md:w-1/3 xl:w-1/4">
+        <div class="mx-auto mb-10 w-full max-w-[370px]">
+          <div class="relative overflow-hidden rounded-lg">
+            <img src="/ponente1.30cff18c.png" alt="Ana López" class="w-full">
+            <div class="absolute bottom-5 left-0 w-full text-center">
+              <div class="relative mx-5 overflow-hidden rounded-lg bg-white px-3 py-5 dark:bg-dark-2">
+                <h3 class="text-base font-semibold text-dark dark:text-white">
+                  Coriss Ambady
+                </h3>
+                <p class="text-xs text-body-color dark:text-dark-6">
+                  Web Developer
+                </p>
+                <!-- SVG decorativo -->
+                <div>
+                  <span class="absolute bottom-0 left-0">
+                    <svg width="61" height="30" viewBox="0 0 61 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="16" cy="45" r="45" fill="#13C296" fill-opacity="0.11"></circle>
+                    </svg>
+                  </span>
+                  <span class="absolute right-0 top-0">
+                    <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="0.706257" cy="24.3533" r="0.646687" transform="rotate(-90 0.706257 24.3533)" fill="#3056D3"></circle>
+                      <circle cx="6.39669" cy="24.3533" r="0.646687" transform="rotate(-90 6.39669 24.3533)" fill="#3056D3"></circle>
+                      <circle cx="12.0881" cy="24.3533" r="0.646687" transform="rotate(-90 12.0881 24.3533)" fill="#3056D3"></circle>
+                      <circle cx="17.7785" cy="24.3533" r="0.646687" transform="rotate(-90 17.7785 24.3533)" fill="#3056D3"></circle>
+                      <circle cx="0.706257" cy="18.6624" r="0.646687" transform="rotate(-90 0.706257 18.6624)" fill="#3056D3"></circle>
+                      <circle cx="6.39669" cy="18.6624" r="0.646687" transform="rotate(-90 6.39669 18.6624)" fill="#3056D3"></circle>
+                      <circle cx="12.0881" cy="18.6624" r="0.646687" transform="rotate(-90 12.0881 18.6624)" fill="#3056D3"></circle>
+                      <circle cx="17.7785" cy="18.6624" r="0.646687" transform="rotate(-90 17.7785 18.6624)" fill="#3056D3"></circle>
+                      <circle cx="0.706257" cy="12.9717" r="0.646687" transform="rotate(-90 0.706257 12.9717)" fill="#3056D3"></circle>
+                      <circle cx="6.39669" cy="12.9717" r="0.646687" transform="rotate(-90 6.39669 12.9717)" fill="#3056D3"></circle>
+                      <circle cx="12.0881" cy="12.9717" r="0.646687" transform="rotate(-90 12.0881 12.9717)" fill="#3056D3"></circle>
+                      <circle cx="17.7785" cy="12.9717" r="0.646687" transform="rotate(-90 17.7785 12.9717)" fill="#3056D3"></circle>
+                      <circle cx="0.706257" cy="7.28077" r="0.646687" transform="rotate(-90 0.706257 7.28077)" fill="#3056D3"></circle>
+                      <circle cx="6.39669" cy="7.28077" r="0.646687" transform="rotate(-90 6.39669 7.28077)" fill="#3056D3"></circle>
+                      <circle cx="12.0881" cy="7.28077" r="0.646687" transform="rotate(-90 12.0881 7.28077)" fill="#3056D3"></circle>
+                      <circle cx="17.7785" cy="7.28077" r="0.646687" transform="rotate(-90 17.7785 7.28077)" fill="#3056D3"></circle>
+                      <circle cx="0.706257" cy="1.58989" r="0.646687" transform="rotate(-90 0.706257 1.58989)" fill="#3056D3"></circle>
+                      <circle cx="6.39669" cy="1.58989" r="0.646687" transform="rotate(-90 6.39669 1.58989)" fill="#3056D3"></circle>
+                      <circle cx="12.0881" cy="1.58989" r="0.646687" transform="rotate(-90 12.0881 1.58989)" fill="#3056D3"></circle>
+                      <circle cx="17.7785" cy="1.58989" r="0.646687" transform="rotate(-90 17.7785 1.58989)" fill="#3056D3"></circle>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ponente 2 -->
+      <div class="w-full px-4 md:w-1/3 xl:w-1/4">
+        <div class="mx-auto mb-10 w-full max-w-[370px]">
+          <div class="relative overflow-hidden rounded-lg">
+            <img src="/ponente2.4cf31b92.png" alt="Ana López" class="w-full">
+            <div class="absolute bottom-5 left-0 w-full text-center">
+              <div class="relative mx-5 overflow-hidden rounded-lg bg-white px-3 py-5 dark:bg-dark-2">
+                <h3 class="text-base font-semibold text-dark dark:text-white">
+                  Glorius Cristian
+                </h3>
+                <p class="text-xs text-body-color dark:text-dark-6">
+                  App Developer
+                </p>
+                <div>
+                  <span class="absolute bottom-0 left-0">
+                    <svg width="61" height="30" viewBox="0 0 61 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="16" cy="45" r="45" fill="#13C296" fill-opacity="0.11"></circle>
+                    </svg>
+                  </span>
+                  <span class="absolute right-0 top-0">
+                    <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="0.706257" cy="24.3533" r="0.646687" transform="rotate(-90 0.706257 24.3533)" fill="#3056D3"></circle>
+                      <circle cx="6.39669" cy="24.3533" r="0.646687" transform="rotate(-90 6.39669 24.3533)" fill="#3056D3"></circle>
+                      <circle cx="12.0881" cy="24.3533" r="0.646687" transform="rotate(-90 12.0881 24.3533)" fill="#3056D3"></circle>
+                      <circle cx="17.7785" cy="24.3533" r="0.646687" transform="rotate(-90 17.7785 24.3533)" fill="#3056D3"></circle>
+                      <circle cx="0.706257" cy="18.6624" r="0.646687" transform="rotate(-90 0.706257 18.6624)" fill="#3056D3"></circle>
+                      <circle cx="6.39669" cy="18.6624" r="0.646687" transform="rotate(-90 6.39669 18.6624)" fill="#3056D3"></circle>
+                      <circle cx="12.0881" cy="18.6624" r="0.646687" transform="rotate(-90 12.0881 18.6624)" fill="#3056D3"></circle>
+                      <circle cx="17.7785" cy="18.6624" r="0.646687" transform="rotate(-90 17.7785 18.6624)" fill="#3056D3"></circle>
+                      <circle cx="0.706257" cy="12.9717" r="0.646687" transform="rotate(-90 0.706257 12.9717)" fill="#3056D3"></circle>
+                      <circle cx="6.39669" cy="12.9717" r="0.646687" transform="rotate(-90 6.39669 12.9717)" fill="#3056D3"></circle>
+                      <circle cx="12.0881" cy="12.9717" r="0.646687" transform="rotate(-90 12.0881 12.9717)" fill="#3056D3"></circle>
+                      <circle cx="17.7785" cy="12.9717" r="0.646687" transform="rotate(-90 17.7785 12.9717)" fill="#3056D3"></circle>
+                      <circle cx="0.706257" cy="7.28077" r="0.646687" transform="rotate(-90 0.706257 7.28077)" fill="#3056D3"></circle>
+                      <circle cx="6.39669" cy="7.28077" r="0.646687" transform="rotate(-90 6.39669 7.28077)" fill="#3056D3"></circle>
+                      <circle cx="12.0881" cy="7.28077" r="0.646687" transform="rotate(-90 12.0881 7.28077)" fill="#3056D3"></circle>
+                      <circle cx="17.7785" cy="7.28077" r="0.646687" transform="rotate(-90 17.7785 7.28077)" fill="#3056D3"></circle>
+                      <circle cx="0.706257" cy="1.58989" r="0.646687" transform="rotate(-90 0.706257 1.58989)" fill="#3056D3"></circle>
+                      <circle cx="6.39669" cy="1.58989" r="0.646687" transform="rotate(-90 6.39669 1.58989)" fill="#3056D3"></circle>
+                      <circle cx="12.0881" cy="1.58989" r="0.646687" transform="rotate(-90 12.0881 1.58989)" fill="#3056D3"></circle>
+                      <circle cx="17.7785" cy="1.58989" r="0.646687" transform="rotate(-90 17.7785 1.58989)" fill="#3056D3"></circle>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ponente 3 -->
+      <div class="w-full px-4 md:w-1/3 xl:w-1/4">
+        <div class="mx-auto mb-10 w-full max-w-[370px]">
+          <div class="relative overflow-hidden rounded-lg">
+            <img src="/ponente3.9b6c3886.png" alt="Ana López" class="w-full">
+            <div class="absolute bottom-5 left-0 w-full text-center">
+              <div class="relative mx-5 overflow-hidden rounded-lg bg-white px-3 py-5 dark:bg-dark-2">
+                <h3 class="text-base font-semibold text-dark dark:text-white">
+                  Reinhard Pillar
+                </h3>
+                <p class="text-xs text-body-color dark:text-dark-6">
+                  UI/UX Designer
+                </p>
+                <div>
+                  <span class="absolute bottom-0 left-0">
+                    <svg width="61" height="30" viewBox="0 0 61 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="16" cy="45" r="45" fill="#13C296" fill-opacity="0.11"></circle>
+                    </svg>
+                  </span>
+                  <span class="absolute right-0 top-0">
+                    <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="0.706257" cy="24.3533" r="0.646687" transform="rotate(-90 0.706257 24.3533)" fill="#3056D3"></circle>
+                      <circle cx="6.39669" cy="24.3533" r="0.646687" transform="rotate(-90 6.39669 24.3533)" fill="#3056D3"></circle>
+                      <circle cx="12.0881" cy="24.3533" r="0.646687" transform="rotate(-90 12.0881 24.3533)" fill="#3056D3"></circle>
+                      <circle cx="17.7785" cy="24.3533" r="0.646687" transform="rotate(-90 17.7785 24.3533)" fill="#3056D3"></circle>
+                      <circle cx="0.706257" cy="18.6624" r="0.646687" transform="rotate(-90 0.706257 18.6624)" fill="#3056D3"></circle>
+                      <circle cx="6.39669" cy="18.6624" r="0.646687" transform="rotate(-90 6.39669 18.6624)" fill="#3056D3"></circle>
+                      <circle cx="12.0881" cy="18.6624" r="0.646687" transform="rotate(-90 12.0881 18.6624)" fill="#3056D3"></circle>
+                      <circle cx="17.7785" cy="18.6624" r="0.646687" transform="rotate(-90 17.7785 18.6624)" fill="#3056D3"></circle>
+                      <circle cx="0.706257" cy="12.9717" r="0.646687" transform="rotate(-90 0.706257 12.9717)" fill="#3056D3"></circle>
+                      <circle cx="6.39669" cy="12.9717" r="0.646687" transform="rotate(-90 6.39669 12.9717)" fill="#3056D3"></circle>
+                      <circle cx="12.0881" cy="12.9717" r="0.646687" transform="rotate(-90 12.0881 12.9717)" fill="#3056D3"></circle>
+                      <circle cx="17.7785" cy="12.9717" r="0.646687" transform="rotate(-90 17.7785 12.9717)" fill="#3056D3"></circle>
+                      <circle cx="0.706257" cy="7.28077" r="0.646687" transform="rotate(-90 0.706257 7.28077)" fill="#3056D3"></circle>
+                      <circle cx="6.39669" cy="7.28077" r="0.646687" transform="rotate(-90 6.39669 7.28077)" fill="#3056D3"></circle>
+                      <circle cx="12.0881" cy="7.28077" r="0.646687" transform="rotate(-90 12.0881 7.28077)" fill="#3056D3"></circle>
+                      <circle cx="17.7785" cy="7.28077" r="0.646687" transform="rotate(-90 17.7785 7.28077)" fill="#3056D3"></circle>
+                      <circle cx="0.706257" cy="1.58989" r="0.646687" transform="rotate(-90 0.706257 1.58989)" fill="#3056D3"></circle>
+                      <circle cx="6.39669" cy="1.58989" r="0.646687" transform="rotate(-90 6.39669 1.58989)" fill="#3056D3"></circle>
+                      <circle cx="12.0881" cy="1.58989" r="0.646687" transform="rotate(-90 12.0881 1.58989)" fill="#3056D3"></circle>
+                      <circle cx="17.7785" cy="1.58989" r="0.646687" transform="rotate(-90 17.7785 1.58989)" fill="#3056D3"></circle>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+<section class="py-12 bg-gray-50">
+    <div class="flex flex-wrap -mx-4 justify-center">
+      <!-- Speaker 4 -->
+      <div class="w-full px-4 mb-10 md:w-1/3 xl:w-1/4 max-w-[370px]">
+        <div class="mx-auto rounded-lg overflow-hidden relative">
+            <img src="/Ponente4.182c04c7.png" alt="Ana López" class="w-full">
+          <div class="absolute bottom-5 left-0 w-full text-center bg-white bg-opacity-90 dark:bg-gray-800 px-4 py-5 rounded-t-lg">
+            <h3 class="text-base font-semibold text-gray-900 dark:text-white">Cynthia Price</h3>
+            <p class="text-xs text-gray-600 dark:text-gray-400">Founder &amp; CEO</p>
+            <div class="relative mt-3">
+              <span class="absolute bottom-0 left-0">
+                <svg width="61" height="30" viewBox="0 0 61 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="16" cy="45" r="45" fill="#13C296" fill-opacity="0.11"></circle>
+                </svg>
+              </span>
+              <span class="absolute right-0 top-0">
+                <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- dots pattern -->
+                  <circle cx="0.7" cy="24.4" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="6.4" cy="24.4" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="12.1" cy="24.4" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="17.8" cy="24.4" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="0.7" cy="18.7" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="6.4" cy="18.7" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="12.1" cy="18.7" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="17.8" cy="18.7" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="0.7" cy="13" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="6.4" cy="13" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="12.1" cy="13" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="17.8" cy="13" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="0.7" cy="7.3" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="6.4" cy="7.3" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="12.1" cy="7.3" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="17.8" cy="7.3" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="0.7" cy="1.6" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="6.4" cy="1.6" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="12.1" cy="1.6" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="17.8" cy="1.6" r="0.65" fill="#3056D3"></circle>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Speaker 5 -->
+      <div class="w-full px-4 mb-10 md:w-1/3 xl:w-1/4 max-w-[370px]">
+        <div class="mx-auto rounded-lg overflow-hidden relative">
+            <img src="/Ponente5.beaaf485.png" alt="Ana López" class="w-full">
+          <div class="absolute bottom-5 left-0 w-full text-center bg-white bg-opacity-90 dark:bg-gray-800 px-4 py-5 rounded-t-lg">
+            <h3 class="text-base font-semibold text-gray-900 dark:text-white">Daniel Foster</h3>
+            <p class="text-xs text-gray-600 dark:text-gray-400">Software Engineer</p>
+            <div class="relative mt-3">
+              <span class="absolute bottom-0 left-0">
+                <svg width="61" height="30" viewBox="0 0 61 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="16" cy="45" r="45" fill="#13C296" fill-opacity="0.11"></circle>
+                </svg>
+              </span>
+              <span class="absolute right-0 top-0">
+                <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="0.7" cy="24.4" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="6.4" cy="24.4" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="12.1" cy="24.4" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="17.8" cy="24.4" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="0.7" cy="18.7" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="6.4" cy="18.7" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="12.1" cy="18.7" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="17.8" cy="18.7" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="0.7" cy="13" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="6.4" cy="13" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="12.1" cy="13" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="17.8" cy="13" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="0.7" cy="7.3" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="6.4" cy="7.3" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="12.1" cy="7.3" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="17.8" cy="7.3" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="0.7" cy="1.6" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="6.4" cy="1.6" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="12.1" cy="1.6" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="17.8" cy="1.6" r="0.65" fill="#3056D3"></circle>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Speaker 6 -->
+      <div class="w-full px-4 mb-10 md:w-1/3 xl:w-1/4 max-w-[370px]">
+        <div class="mx-auto rounded-lg overflow-hidden relative">
+            <img src="/Ponente6.f19f932d.png" alt="Ana López" class="w-full">
+          <div class="absolute bottom-5 left-0 w-full text-center bg-white bg-opacity-90 dark:bg-gray-800 px-4 py-5 rounded-t-lg">
+            <h3 class="text-base font-semibold text-gray-900 dark:text-white">Reinhard Pillar</h3>
+            <p class="text-xs text-gray-600 dark:text-gray-400">UI/UX Designer</p>
+            <div class="relative mt-3">
+              <span class="absolute bottom-0 left-0">
+                <svg width="61" height="30" viewBox="0 0 61 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="16" cy="45" r="45" fill="#13C296" fill-opacity="0.11"></circle>
+                </svg>
+              </span>
+              <span class="absolute right-0 top-0">
+                <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="0.7" cy="24.4" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="6.4" cy="24.4" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="12.1" cy="24.4" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="17.8" cy="24.4" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="0.7" cy="18.7" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="6.4" cy="18.7" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="12.1" cy="18.7" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="17.8" cy="18.7" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="0.7" cy="13" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="6.4" cy="13" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="12.1" cy="13" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="17.8" cy="13" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="0.7" cy="7.3" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="6.4" cy="7.3" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="12.1" cy="7.3" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="17.8" cy="7.3" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="0.7" cy="1.6" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="6.4" cy="1.6" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="12.1" cy="1.6" r="0.65" fill="#3056D3"></circle>
+                  <circle cx="17.8" cy="1.6" r="0.65" fill="#3056D3"></circle>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Speaker 4 -->
+
+    </div>
+  </section></section></div>
+</section>
+
+  <!-- ====== Team Section End -->
+  </main>
+ <footer class="relative z-10 bg-white py-4 px-4 lg:py-6 lg:px-8 dark:bg-dark text-sm">
+  <div class="container mx-auto">
+    <div class="-mx-4 flex flex-wrap">
+      <div class="w-full px-4 sm:w-2/3 lg:w-3/12">
+        <div class="mb-4 w-full">
+          <a href="#" class="mb-3 inline-block max-w-[140px]">
+            <img class="max-w-full dark:hidden" src="/Logopage.163ab661.png" alt="logo">
+            <img src="/Logopage.163ab661.png" alt="logo" class="hidden max-w-full dark:block">
+          </a>
+          <p class="mb-3 text-base text-body-color dark:text-dark-6">
+            Participa en nuestros talleres y sé parte del cambio circular
+          </p>
+          <div class="flex space-x-3 mb-3">
+            <a href="#" class="h-9 w-9 flex items-center justify-center rounded-full bg-uocMasterbrand hover:bg-hoverColor transition">
+              <img src="/facebook.0ac71be3.svg" alt="Facebook" class="h-5 w-5">
+            </a>
+            <a href="#" class="h-9 w-9 flex items-center justify-center rounded-full bg-uocMasterbrand hover:bg-hoverColor transition">
+              <img src="/instagram.a68311c8.svg" alt="Instagram" class="h-5 w-5">
+            </a>
+            <a href="#" class="h-9 w-9 flex items-center justify-center rounded-full bg-uocMasterbrand hover:bg-hoverColor transition">
+              <img src="/linkedin.6cf0a6bb.svg" alt="LinkedIn" class="h-5 w-5">
+            </a>
+          </div>
+          <p class="flex items-center text-sm font-medium text-dark dark:text-uocCorporate ">
+            <span class="mr-2 text-primary">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M15.2 19.5c-.8 0-1.7-.2-2.9-.6-2.1-.8-4.5-2.5-6.5-4.6s-3.8-4.4-4.6-6.5c-.4-1.1-.6-2-.5-2.7.1-.8.4-1.3.9-1.7l2.6-1.6c.6-.3 1.3-.1 1.7.4l2 3c.4.5.2 1.2-.3 1.6L6.5 6.7c.6 1 2.3 3.5 5.4 5.5l.9-1.2c.4-.6 1.1-.7 1.6-.4l2.8 1.8c.5.3.7 1.1.4 1.6l-1.6 2.6c-.4.5-.9.8-1.6.9h-.2z"></path>
+              </svg>
+            </span>
+            <span>+0034 602509017</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Economía Circular -->
+      <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
+        <div class="mb-4 w-full">
+          <h4 class="mb-2 text-lg font-semibold text-dark dark:text-uocCorporate ">Economía Circular</h4>
+          <ul class="space-y-1">
+            <li><a href="#" class="text-base text-body-color hover:text-uocCorporate transition-colors dark:text-dark-6">¿Qué es?</a></li>
+            <li><a href="#" class="text-base text-body-color hover:text-uocCorporate  transition-colors dark:text-dark-6">Principios</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Participación -->
+      <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
+        <div class="mb-4 w-full">
+          <h4 class="mb-2 text-lg font-semibold text-dark dark:text-uocCorporate ">Participación</h4>
+          <ul class="space-y-1">
+            <li><a href="#" class="text-base text-body-color hover:text-uocCorporate transition-colors dark:text-dark-6">Involúcrate</a></li>
+            <li><a href="#" class="text-base text-body-color hover:text-uocCorporate  transition-colors dark:text-dark-6">Eventos</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contacto -->
+      <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
+        <div class="mb-4 w-full">
+          <h4 class="mb-2 text-lg font-semibold text-dark dark:text-uocCorporate ">Contacto</h4>
+          <ul class="space-y-1">
+            <li><a href="#" class="text-base text-body-color hover:text-uocCorporate transition-colors dark:text-dark-6">Escríbenos</a></li>
+            <li><a href="#" class="text-base text-body-color hover:text-uocCorporate transition-colors dark:text-dark-6">Redes sociales</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Créditos -->
+      <div class="w-full px-4 sm:w-1/2 lg:w-3/12">
+        <div class="mb-4 w-full">
+          <h4 class="mb-2 text-lg font-semibold text-dark dark:text-white">Follow Us On</h4>
+          <p class="text-base text-body-color dark:text-dark-6">© 2025 TailGrids</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background SVGs opcionales -->
+  <div>
+    <span class="absolute bottom-0 left-0 z-[-1]">
+      <svg width="217" height="229" viewBox="0 0 217 229" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M-64 140.5C-64 62.904 -1.096 0 76.5 0C154.096 0 217 62.904 217 140.5C217 218.096 154.096 281 76.5 281C-1.09598 281 -64 218.096 -64 140.5Z" fill="url(#paint0_linear)"></path>
+        <defs>
+          <linearGradient id="paint0_linear" x1="76.5" y1="281" x2="76.5" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="" stop-opacity="0.08"></stop>
+            <stop offset="1" stop-color="#C4C4C4" stop-opacity="0"></stop>
+          </linearGradient>
+        </defs>
+      </svg>
+    </span>
+    <span class="absolute right-10 top-10 z-[-1]">
+      <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M37.5 0C58.2107 0 75 16.7893 75 37.5C75 58.2107 58.2107 75 37.5 75C16.7893 75 0 58.2107 0 37.5C0 16.7893 16.7893 0 37.5 0Z" fill="url(#paint1_linear)"></path>
+        <defs>
+          <linearGradient id="paint1_linear" x1="0" y1="37.5" x2="75" y2="37.5" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#13C296" stop-opacity="0.31"></stop>
+            <stop offset="1" stop-color="#C4C4C4" stop-opacity="0"></stop>
+          </linearGradient>
+        </defs>
+      </svg>
+    </span>
+  </div>
+</footer>
+
+  <!-- <script type="module" src="./assets/scripts/main.js"></script> -->
+
+
+<script src="/speakers.6417624b.js"></script></body></html>
