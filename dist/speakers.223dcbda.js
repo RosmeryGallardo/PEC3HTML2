@@ -160,15 +160,15 @@
       });
     }
   }
-})({"9JJ5D":[function(require,module,exports,__globalThis) {
+})({"hYpZu":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 1234;
+var HMR_SERVER_PORT = 8123;
 var HMR_SECURE = false;
-var HMR_ENV_HASH = "d6ea1d42532a7575";
+var HMR_ENV_HASH = "5c3cf7e1285358ec";
 var HMR_USE_SSE = false;
-module.bundle.HMR_BUNDLE_ID = "7055c94b59712999";
+module.bundle.HMR_BUNDLE_ID = "930cae29223dcbda";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_SERVER_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -666,8 +666,8 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     }
 }
 
-},{}],"4M6V8":[function(require,module,exports,__globalThis) {
+},{}],"4gaPa":[function(require,module,exports,__globalThis) {
 
-},{}]},["9JJ5D","4M6V8"], "4M6V8", "parcelRequireb0cb", {})
+},{}]},["hYpZu","4gaPa"], "4gaPa", "parcelRequireb0cb", {})
 
-//# sourceMappingURL=uoc-boilerplate.59712999.js.map
+//# sourceMappingURL=speakers.223dcbda.js.map

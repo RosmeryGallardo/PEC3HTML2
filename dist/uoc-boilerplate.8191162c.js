@@ -160,15 +160,15 @@
       });
     }
   }
-})({"gMePO":[function(require,module,exports,__globalThis) {
+})({"P7slY":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 1234;
+var HMR_SERVER_PORT = 8123;
 var HMR_SECURE = false;
-var HMR_ENV_HASH = "d6ea1d42532a7575";
+var HMR_ENV_HASH = "d20265b20eea3d1a";
 var HMR_USE_SSE = false;
-module.bundle.HMR_BUNDLE_ID = "b6aed0666417624b";
+module.bundle.HMR_BUNDLE_ID = "25732bac8191162c";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_SERVER_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -666,8 +666,59 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     }
 }
 
-},{}],"hp1Cd":[function(require,module,exports,__globalThis) {
+},{}],"gKfsE":[function(require,module,exports,__globalThis) {
+// /**
+//  * Import dependencies from node_modules
+//  * see commented examples below
+//  */
+// import moment from 'moment';
+// import L from 'leaflet';
+// // import 'some-node-module';
+// // import SomeModule from 'some-node-module';
+// /**
+//  * Write any other JavaScript below
+//  */
+// +( function() {
+//   const university = "UOC";
+//   console.log(`Hello, ${university}!`);
+//   //console.log(moment().format('YYYY-MM-DD'));
+// } )();
+const data = [
+    {
+        title: "Ciudades circulares",
+        description: "Exploraremos c\xf3mo las ciudades est\xe1n adoptando modelos sostenibles, reutilizaci\xf3n de recursos y estrategias urbanas circulares.",
+        icon: "fas fa-city",
+        link: "#",
+        cta: "Ver m\xe1s"
+    },
+    {
+        title: "Moda circular",
+        description: "Se abordar\xe1n pr\xe1cticas en dise\xf1o, producci\xf3n y consumo textil que reducen el impacto ambiental del sector de la moda.",
+        icon: "fas fa-tshirt",
+        link: "#",
+        cta: "Ver m\xe1s"
+    },
+    {
+        title: "Tecnolog\xeda circular",
+        description: "An\xe1lisis de la gesti\xf3n de residuos electr\xf3nicos, ecodise\xf1o y tecnolog\xeda aplicada a la optimizaci\xf3n de recursos.",
+        icon: "fas fa-microchip",
+        link: "#",
+        cta: "Ver m\xe1s"
+    }
+];
+function renderCards() {
+    const container = document.getElementById("cards-container");
+    const template = document.querySelector('div[data-component="card"]');
+    if (!template || !container) return;
+    data.forEach((card)=>{
+        const html = template.innerHTML.replace(/{{\s*title\s*}}/g, card.title).replace(/{{\s*description\s*}}/g, card.description).replace(/{{\s*icon\s*}}/g, card.icon).replace(/{{\s*link\s*}}/g, card.link).replace(/{{\s*cta\s*}}/g, card.cta);
+        const temp = document.createElement("div");
+        temp.innerHTML = html;
+        container.appendChild(temp.firstElementChild);
+    });
+}
+renderCards();
 
-},{}]},["gMePO","hp1Cd"], "hp1Cd", "parcelRequireb0cb", {})
+},{}]},["P7slY","gKfsE"], "gKfsE", "parcelRequireb0cb", {})
 
-//# sourceMappingURL=speakers.6417624b.js.map
+//# sourceMappingURL=uoc-boilerplate.8191162c.js.map
