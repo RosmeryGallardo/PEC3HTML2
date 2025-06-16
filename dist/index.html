@@ -1,164 +1,165 @@
-<!DOCTYPE html><html lang=es><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Jornadas de Economía Circular</title><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css><link href=uoc-boilerplate.f659fdcc.css rel=stylesheet><body class="bg-uoc-bg font-text">
+<!DOCTYPE html><html lang="es"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornadas de Economía Circular</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="uoc-boilerplate.e3ce54da.css" type="text/css" rel="stylesheet">
+  </head>
+<body class="bg-uoc-bg font-text">
 
-  
-
-<header class=bg-uocMasterbrand>
-  <nav class="flex items-center justify-between lg:px-8 max-w-7xl mx-auto p-6" aria-label=Global>
+  <!-- Header -->
+<header class="bg-uocMasterbrand">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
     <div class="flex lg:flex-1">
-      <a href=index.html class="-m-1.5 p-1.5">
-        <span class=sr-only>Your Company</span>
-        <img class="h-15 w-auto" src=Logopage.529fb36e.png alt>
+      <a href="index.html" class="-m-1.5 p-1.5">
+        <span class="sr-only">Your Company</span>
+        <img class="h-15 w-auto" src="Logopage.60745b6a.png" alt="">
       </a>
     </div>
     <div class="flex lg:hidden">
-      <button type=button class="-m-2.5 inline-flex items-center justify-center p-2.5 rounded-md text-gray-700">
-        <span class=sr-only>Open main menu</span>
-        <svg fill=none stroke=currentColor stroke-width=1.5 aria-hidden=true class=size-6 data-slot=icon viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+        <span class="sr-only">Open main menu</span>
+        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
       </button>
     </div>
     <div class="hidden lg:flex lg:gap-x-12">
-      <a href=# class="duration-200r font-family-base hover:text-hoverColor text-base text-uocbg transition-colors">Artículo</a>
-      <a href=speakers.html class="duration-200 font-family-base hover:text-hoverColor text-base text-uocbg transition-colors">Ponentes</a>
-      <a href=# class="duration-200 font-family-base hover:text-hoverColor text-base text-uocbg transition-colors">Contacto</a>
+      <a href="#" class="text-base font-family-base text-uocbg hover:text-hoverColor transition-colors duration-200r">Artículo</a>
+      <a href="speakers.html" class="text-base font-family-base text-uocbg hover:text-hoverColor transition-colors duration-200">Ponentes</a>
+      <a href="#" class="text-base font-family-base text-uocbg hover:text-hoverColor transition-colors duration-200">Contacto</a>
     </div>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-      <a href=# class="bg-uocCorporate flex-none font-semibold hover:bg-hoverColor px-2.5 py-1 rounded-full shadow-xs text-sm text-white">Log in <span aria-hidden=true>→</span></a>
+      <a href="#" class="flex-none rounded-full bg-uocCorporate px-2.5 py-1 text-sm font-semibold text-white shadow-xs hover:bg-hoverColor">Log in <span aria-hidden="true">→</span></a>
     </div>
   </nav>
-  
-  <div class=lg:hidden role=dialog aria-modal=true>
-    
+  <!-- Mobile menu, show/hide based on menu open state. -->
+  <div class="lg:hidden" role="dialog" aria-modal="true">
+    <!-- Background backdrop, show/hide based on slide-over state. -->
     <div class="fixed inset-0 z-50"></div>
-    <div class="bg-white fixed inset-y-0 overflow-y-auto p-6 right-0 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 w-full z-50">
-      <div class="flex items-center justify-between">
-        <a href=# class="-m-1.5 p-1.5">
-          <span class=sr-only>Your Company</span>
-          <img class="h-8 w-auto" src=Logopage.529fb36e.png alt>
-        </a>
-        <button type=button class="-m-2.5 p-2.5 rounded-md text-gray-700">
-          <span class=sr-only>Close menu</span>
-          <svg fill=none stroke=currentColor stroke-width=1.5 aria-hidden=true class=size-6 data-slot=icon viewBox="0 0 24 24"><path stroke-linecap=round stroke-linejoin=round d="M6 18 18 6M6 6l12 12"/></svg>
-        </button>
-      </div>
-      <div class="flow-root mt-6">
-        <div class="-my-6 divide-gray-500/10 divide-y">
-          <div class="py-6 space-y-2">
-            <div class=-mx-3>
-              <button type=button class="flex font-semibold hover:bg-gray-50 items-center justify-between pl-3 pr-3.5 py-2 rounded-lg text-base/7 text-gray-900 w-full" aria-controls=disclosure-1 aria-expanded=false>
-                Product
-                
-                <svg fill=currentColor aria-hidden=true class="flex-none size-5" data-slot=icon viewBox="0 0 20 20"><path fill-rule=evenodd d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06" clip-rule=evenodd /></svg>
-              </button>
-            </div>
-            <a href=# class="-mx-3 block font-semibold hover:bg-hoverColor px-3 py-2 rounded-lg text-base/7 text-uocCorporate">Artículo</a>
-            <a href=# class="-mx-3 block font-semibold hover:bg-hoverColor px-3 py-2 rounded-lg text-base/7 text-uocCorporate">Ponentes</a>
-            <a href=# class="-mx-3 block font-semibold hover:bg-hoverColor px-3 py-2 rounded-lg text-base/7 text-uocCorporate">Contacto</a>
-          </div>
-          <div class=py-6>
-            <a href=# class="-mx-3 block font-semibold hover:bg-gray-50 px-3 py-2.5 rounded-lg text-base/7 text-gray-900">Log in</a>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </header>
 
 
-  <div class="isolate overflow-hidden py-24 relative sm:py-32 text-white">
-    <img src=Poster.ca0d62b1.jpg alt class="-z-10 absolute h-full inset-0 md:object-center object-cover object-right w-full">
+  <div class="relative isolate overflow-hidden py-24 sm:py-32 text-white">
+    <img src="Poster.74a3f7c1.jpg" alt="" class="absolute inset-0 -z-10 w-full h-full object-cover object-right md:object-center">
 
-    <div class="hidden sm:-top-10 sm:-z-10 sm:absolute sm:block sm:blur-3xl sm:mr-10 sm:right-1/2 sm:transform-gpu" aria-hidden=true>
-      <div class="aspect-[1097/845] bg-gradient-uoc opacity-[var(--color-overlayOpacity)] w-[137.125px]" style="clip-path:polygon(74.1% 44.1%,100% 61.6%,97.5% 26.9%,85.5% .1%,80.7% 2%,72.5% 32.5%,60.2% 62.4%,52.4% 68.1%,47.5% 58.3%,45.2% 34.5%,27.5% 76.7%,.1% 64.9%,17.9% 100%,27.6% 76.8%,76.1% 97.7%,74.1% 44.1%)">
+    <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
+      <div class="aspect-[1097/845] w-[137.125px] opacity-[var(--color-overlayOpacity)] bg-gradient-uoc" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% .1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, .1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
       </div>
     </div>
 
-    <div class="lg:px-8 max-w-7xl mx-auto px-6">
-      <div class="lg:mx-0 max-w-2xl mx-auto">
-        <h2 class="font-base font-semibold sm:text-7xl text-5xl tracking-tight">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+        <h2 class="text-5xl font-semibold tracking-tight sm:text-7xl font-base">
           Jornadas de Economía Circular
         </h2>
-        <p class="font-medium mt-8 sm:text-xl/8 text-lg text-uoc-corporate">
+        <p class="mt-8 text-lg font-medium text-uoc-corporate sm:text-xl/8">
           Promueve un consumo sostenible que minimiza el impacto ambiental y fomenta la innovación.
         </p>
       </div>
 
-      <div class="bg-[rgba(3,88,140,0.7)] lg:max-w-none lg:mx-0 max-w-2xl mt-10 mx-auto p-6 rounded-lg">
-        <div class="font-semibold gap-x-8 gap-y-6 grid grid-cols-1 lg:gap-x-10 md:flex sm:grid-cols-2 text-base/7">
-          <a href=# class="hover:underline text-uoc-bg">Programa de actividades →</a>
-          <a href=# class="hover:underline text-uoc-bg">Mesa redonda: retos circulares →</a>
-          <a href=# class="hover:underline text-uoc-bg">Ponencias destacadas →</a>
-          <a href=# class="hover:underline text-uoc-bg">Conoce a los ponentes →</a>
+      <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none bg-[rgba(3,88,140,0.7)] p-6 rounded-lg">
+        <div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold sm:grid-cols-2 md:flex lg:gap-x-10">
+          <a href="#" class="text-uoc-bg hover:underline">Programa de actividades →</a>
+          <a href="#" class="text-uoc-bg hover:underline">Mesa redonda: retos circulares →</a>
+          <a href="#" class="text-uoc-bg hover:underline">Ponencias destacadas →</a>
+          <a href="#" class="text-uoc-bg hover:underline">Conoce a los ponentes →</a>
         </div>
 
-        <dl class="gap-8 grid grid-cols-1 lg:grid-cols-4 mt-16 sm:grid-cols-2 sm:mt-20">
+        <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
           <div class="flex flex-col-reverse gap-1">
             <dt class="text-base/7 text-uoc-masterbrand">Ponencias impartidas</dt>
-            <dd class="font-semibold text-4xl text-uoc-bg tracking-tight">12</dd>
+            <dd class="text-4xl font-semibold tracking-tight text-uoc-bg">12</dd>
           </div>
           <div class="flex flex-col-reverse gap-1">
             <dt class="text-base/7 text-uoc-masterbrand">Asistentes inscritos</dt>
-            <dd class="font-semibold text-4xl text-uoc-bg tracking-tight">300+</dd>
+            <dd class="text-4xl font-semibold tracking-tight text-uoc-bg">300+</dd>
           </div>
           <div class="flex flex-col-reverse gap-1">
             <dt class="text-base/7 text-uoc-masterbrand">Expertos invitados</dt>
-            <dd class="font-semibold text-4xl text-uoc-bg tracking-tight">40</dd>
+            <dd class="text-4xl font-semibold tracking-tight text-uoc-bg">40</dd>
           </div>
           <div class="flex flex-col-reverse gap-1">
             <dt class="text-base/7 text-uoc-masterbrand">Horas de contenido</dt>
-            <dd class="font-semibold text-4xl text-uoc-bg tracking-tight">122</dd>
+            <dd class="text-4xl font-semibold tracking-tight text-uoc-bg">122</dd>
           </div>
         </dl>
       </div>
     </div>
   </div>
 
-  <main class=font-text>
-    <section class="flex gap-6 justify-center py-10">
-      <div class=icon-circle>
-        <i class="fa-recycle fas"></i>
+  <main class="font-text">
+    <section class="flex justify-center gap-6 py-10">
+      <div class="icon-circle">
+        <i class="fas fa-recycle"></i>
       </div>
-      <div class=icon-circle>
-        <i class="fa-leaf fas"></i>
+      <div class="icon-circle">
+        <i class="fas fa-leaf"></i>
       </div>
-      <div class=icon-circle>
-        <i class="fa-sync-alt fas"></i>
+      <div class="icon-circle">
+        <i class="fas fa-sync-alt"></i>
   </div>
     </section>
-    <section class="bg-white px-6 py-12 text-uoc-corporate">
+    <section class="px-6 py-12 bg-white text-uoc-corporate">
       <div class="max-w-4xl mx-auto text-center">
-        <h2 class="font-base font-bold text-3xl">¿Qué es la Economía Circular?</h2>
+        <h2 class="text-3xl font-bold font-base">¿Qué es la Economía Circular?</h2>
         <p class="mt-4 text-lg">
           La economía circular es un modelo de producción y consumo que fomenta la reutilización, el reciclaje...
         </p>
-        <button class="bg-uoc-corporate btn-primary hover:bg-hoverColor mt-6 px-6 py-2 rounded-full text-uocbg transition">
+        <button class=" btn-primary mt-6 px-6 py-2 bg-uoc-corporate text-uocbg rounded-full hover:bg-hoverColor transition">
           Inscribirse
         </button>
       </div>
     </section>
 
-    <div id=cards-container class="flex flex-row items-start justify-center max-w-7xl mx-auto overflow-x-auto px-4 py-8 space-x-4 w-full">
+    <div id="cards-container" class="flex flex-row justify-center items-start space-x-4 overflow-x-auto py-8 px-4 mx-auto w-full max-w-7xl">
     </div>
 
-    
+    <!-- <div class="w-full px-4 md:w-1/2 xl:w-1/4">
+    <div
+    class="mb-10 overflow-hidden rounded-lg bg-white shadow-1 duration-300 hover:shadow-3 dark:bg-dark-2 dark:shadow-card dark:hover:shadow-3">
 
-<div data-component=card class=hidden>
-  <div class="md:w-1/2 px-4 w-full xl:w-1/4">
-    <div class="bg-uocCorporate dark:bg-dark-2 dark:hover:shadow-3 dark:shadow-card duration-300 hover:shadow-3 mb-10 overflow-hidden rounded-lg shadow-1">
-      <div class="flex justify-center pt-8 text-6xl text-uoc-masterbrand">
-        <i class="icon text-uocbg {{ }}"></i>
+    <div class="flex justify-center pt-8 text-uoc-masterbrand text-6xl">
+      <i class="fas fa-tshirt text-uocCorporate"></i> 
+    </div>
+    <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
+      <h3>
+        <a href="javascript:void(0)"
+          class="mb-4 block text-xl font-semibold text-dark hover:text-primary sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] dark:text-white">
+          Moda circular
+        </a>
+      </h3>
+      <p class="mb-7 text-base leading-relaxed text-body-color dark:text-dark-6">
+        Prácticas en diseño, producción y consumo textil que reducen el impacto ambiental del sector moda.
+      </p>
+
+      <a href="javascript:void(0)"
+        class="inline-block rounded-full border border-gray-3 px-7 py-2 text-base font-family-base text-body-color transition hover:border-primary hover:bg-primary hover:text-hoverColor dark:border-dark-3 dark:text-dark-6">
+        Ver más
+      </a>
+    </div>
+  </div>
+</div> -->
+<!-- Usamos hidden para mantener en el doom sin que visual lo use-->
+<div data-component="card" class="hidden">
+  <div class="w-full px-4 md:w-1/2 xl:w-1/4">
+    <div class="mb-10 overflow-hidden rounded-lg bg-uocCorporate shadow-1 duration-300 hover:shadow-3 dark:bg-dark-2 dark:shadow-card dark:hover:shadow-3">
+      <div class="flex justify-center pt-8 text-uoc-masterbrand text-6xl">
+        <i class="{{ icon }} text-uocbg"></i>
       </div>
 
-      <div class="md:p-7 p-8 sm:p-9 text-center xl:p-9">
+      <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
         <h3>
-          <a href="{{ link }}" class="2xl:text-[22px] block dark:text-uocbg font-family-text hover:text-hoverColor lg:text-[22px] mb-4 md:text-xl sm:text-[22px] text-dark text-xl xl:text-xl">
+          <a href="{{ link }}" class="mb-4 block text-xl font-family-text text-dark hover:text-hoverColor sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] dark:text-uocbg">
             {{ title }}
           </a>
         </h3>
-        <p class="dark:text-dark-6 leading-relaxed mb-7 text-base text-uocbg">
+        <p class="mb-7 text-base leading-relaxed text-uocbg dark:text-dark-6">
           {{ description }}
         </p>
 
-        <a href="{{ link }}" class="border border-gray-3 dark:border-dark-3 dark:text-dark-6 font-family-base hover:bg-primary hover:border-primary hover:text-hoverColor inline-block px-7 py-2 rounded-full text-base text-uocbg transition">
+        <a href="{{ link }}" class="inline-block rounded-full border border-gray-3 px-7 py-2 text-base font-family-base text-uocbg transition hover:border-primary hover:bg-primary hover:text-hoverColor dark:border-dark-3 dark:text-dark-6">
           {{ cta }}
         </a>
       </div>
@@ -167,102 +168,104 @@
 </div>
 
 
-    <div class="flex gap-4 justify-center mt-12">
-      <div class="bg-uoc-bac h-6 opacity-30 rounded-full w-6"></div>
-      <div class="bg-uoc-bac h-6 opacity-30 rounded-full w-6"></div>
-      <div class="bg-uoc-bac h-6 opacity-30 rounded-full w-6"></div>
+    <div class="mt-12 flex justify-center gap-4">
+      <div class="w-6 h-6 bg-uoc-bac rounded-full opacity-30"></div>
+      <div class="w-6 h-6 bg-uoc-bac rounded-full opacity-30"></div>
+      <div class="w-6 h-6 bg-uoc-bac rounded-full opacity-30"></div>
     </div>
   </main>
-  <footer class="bg-white dark:bg-dark lg:px-8 lg:py-6 px-4 py-4 relative text-sm z-10">
+  <footer class="relative z-10 bg-white py-4 px-4 lg:py-6 lg:px-8 dark:bg-dark text-sm">
   <div class="container mx-auto">
     <div class="-mx-4 flex flex-wrap">
-      <div class="lg:w-3/12 px-4 sm:w-2/3 w-full">
+      <div class="w-full px-4 sm:w-2/3 lg:w-3/12">
         <div class="mb-4 w-full">
-          <a href=# class="inline-block max-w-[140px] mb-3">
-            <img class="dark:hidden max-w-full" src=Logopage.529fb36e.png alt=logo>
-            <img src=Logopage.529fb36e.png alt=logo class="dark:block hidden max-w-full">
+          <a href="#" class="mb-3 inline-block max-w-[140px]">
+            <img class="max-w-full dark:hidden" src="Logopage.60745b6a.png" alt="logo">
+            <img src="Logopage.60745b6a.png" alt="logo" class="hidden max-w-full dark:block">
           </a>
-          <p class="dark:text-dark-6 mb-3 text-base text-body-color">
+          <p class="mb-3 text-base text-body-color dark:text-dark-6">
             Participa en nuestros talleres y sé parte del cambio circular
           </p>
-          <div class="flex mb-3 space-x-3">
-            <a href=# class="bg-uocMasterbrand flex h-9 hover:bg-hoverColor items-center justify-center rounded-full transition w-9">
-              <img src=facebook.44359420.svg alt=Facebook class="h-5 w-5">
+          <div class="flex space-x-3 mb-3">
+            <a href="#" class="h-9 w-9 flex items-center justify-center rounded-full bg-uocMasterbrand hover:bg-hoverColor transition">
+              <img src="facebook.fd3e2545.svg" alt="Facebook" class="h-5 w-5">
             </a>
-            <a href=# class="bg-uocMasterbrand flex h-9 hover:bg-hoverColor items-center justify-center rounded-full transition w-9">
-              <img src=instagram.bc45b8df.svg alt=Instagram class="h-5 w-5">
+            <a href="#" class="h-9 w-9 flex items-center justify-center rounded-full bg-uocMasterbrand hover:bg-hoverColor transition">
+              <img src="instagram.90196129.svg" alt="Instagram" class="h-5 w-5">
             </a>
-            <a href=# class="bg-uocMasterbrand flex h-9 hover:bg-hoverColor items-center justify-center rounded-full transition w-9">
-              <img src=linkedin.26bbf1cd.svg alt=LinkedIn class="h-5 w-5">
+            <a href="#" class="h-9 w-9 flex items-center justify-center rounded-full bg-uocMasterbrand hover:bg-hoverColor transition">
+              <img src="linkedin.8c33ff04.svg" alt="LinkedIn" class="h-5 w-5">
             </a>
           </div>
-          <p class="dark:text-uocCorporate flex font-medium items-center text-dark text-sm">
+          <p class="flex items-center text-sm font-medium text-dark dark:text-uocCorporate">
             <span class="mr-2 text-primary">
-              <svg width=18 height=18 fill=currentColor viewBox="0 0 20 20"><path d="M15.2 19.5c-.8 0-1.7-.2-2.9-.6-2.1-.8-4.5-2.5-6.5-4.6S2 9.9 1.2 7.8C.8 6.7.6 5.8.7 5.1c.1-.8.4-1.3.9-1.7l2.6-1.6c.6-.3 1.3-.1 1.7.4l2 3c.4.5.2 1.2-.3 1.6l-1.1-.1c.6 1 2.3 3.5 5.4 5.5l.9-1.2c.4-.6 1.1-.7 1.6-.4l2.8 1.8c.5.3.7 1.1.4 1.6L16 16.6c-.4.5-.9.8-1.6.9h-.2Z"/></svg>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M15.2 19.5c-.8 0-1.7-.2-2.9-.6-2.1-.8-4.5-2.5-6.5-4.6s-3.8-4.4-4.6-6.5c-.4-1.1-.6-2-.5-2.7.1-.8.4-1.3.9-1.7l2.6-1.6c.6-.3 1.3-.1 1.7.4l2 3c.4.5.2 1.2-.3 1.6L6.5 6.7c.6 1 2.3 3.5 5.4 5.5l.9-1.2c.4-.6 1.1-.7 1.6-.4l2.8 1.8c.5.3.7 1.1.4 1.6l-1.6 2.6c-.4.5-.9.8-1.6.9h-.2z"></path>
+              </svg>
             </span>
             <span>+0034 602509017</span>
           </p>
         </div>
       </div>
 
-      
-      <div class="lg:w-2/12 px-4 sm:w-1/2 w-full">
+      <!-- Economía Circular -->
+      <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
         <div class="mb-4 w-full">
-          <h4 class="dark:text-uocCorporate font-semibold mb-2 text-dark text-lg">
+          <h4 class="mb-2 text-lg font-semibold text-dark dark:text-uocCorporate">
             Economía Circular
           </h4>
-          <ul class=space-y-1>
+          <ul class="space-y-1">
             <li>
-              <a href=# class="dark:text-dark-6 hover:text-uocCorporate text-base text-body-color transition-colors">¿Qué es?</a>
+              <a href="#" class="text-base text-body-color hover:text-uocCorporate transition-colors dark:text-dark-6">¿Qué es?</a>
             </li>
             <li>
-              <a href=# class="dark:text-dark-6 hover:text-uocCorporate text-base text-body-color transition-colors">Principios</a>
+              <a href="#" class="text-base text-body-color hover:text-uocCorporate transition-colors dark:text-dark-6">Principios</a>
             </li>
           </ul>
         </div>
       </div>
 
-      
-      <div class="lg:w-2/12 px-4 sm:w-1/2 w-full">
+      <!-- Participación -->
+      <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
         <div class="mb-4 w-full">
-          <h4 class="dark:text-uocCorporate font-semibold mb-2 text-dark text-lg">
+          <h4 class="mb-2 text-lg font-semibold text-dark dark:text-uocCorporate">
             Participación
           </h4>
-          <ul class=space-y-1>
+          <ul class="space-y-1">
             <li>
-              <a href=# class="dark:text-dark-6 hover:text-uocCorporate text-base text-body-color transition-colors">Involúcrate</a>
+              <a href="#" class="text-base text-body-color hover:text-uocCorporate transition-colors dark:text-dark-6">Involúcrate</a>
             </li>
             <li>
-              <a href=# class="dark:text-dark-6 hover:text-uocCorporate text-base text-body-color transition-colors">Eventos</a>
+              <a href="#" class="text-base text-body-color hover:text-uocCorporate transition-colors dark:text-dark-6">Eventos</a>
             </li>
           </ul>
         </div>
       </div>
 
-      
-      <div class="lg:w-2/12 px-4 sm:w-1/2 w-full">
+      <!-- Contacto -->
+      <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
         <div class="mb-4 w-full">
-          <h4 class="dark:text-uocCorporate font-semibold mb-2 text-dark text-lg">
+          <h4 class="mb-2 text-lg font-semibold text-dark dark:text-uocCorporate">
             Contacto
           </h4>
-          <ul class=space-y-1>
+          <ul class="space-y-1">
             <li>
-              <a href=# class="dark:text-dark-6 hover:text-uocCorporate text-base text-body-color transition-colors">Escríbenos</a>
+              <a href="#" class="text-base text-body-color hover:text-uocCorporate transition-colors dark:text-dark-6">Escríbenos</a>
             </li>
             <li>
-              <a href=# class="dark:text-dark-6 hover:text-uocCorporate text-base text-body-color transition-colors">Redes sociales</a>
+              <a href="#" class="text-base text-body-color hover:text-uocCorporate transition-colors dark:text-dark-6">Redes sociales</a>
             </li>
           </ul>
         </div>
       </div>
 
-      
-      <div class="lg:w-3/12 px-4 sm:w-1/2 w-full">
+      <!-- Créditos -->
+      <div class="w-full px-4 sm:w-1/2 lg:w-3/12">
         <div class="mb-4 w-full">
-          <h4 class="dark:text-white font-semibold mb-2 text-dark text-lg">
+          <h4 class="mb-2 text-lg font-semibold text-dark dark:text-white">
             Follow Us On
           </h4>
-          <p class="dark:text-dark-6 text-base text-body-color">
+          <p class="text-base text-body-color dark:text-dark-6">
             © 2025 TailGrids
           </p>
         </div>
@@ -270,17 +273,34 @@
     </div>
   </div>
 
-  
+  <!-- Background SVGs opcionales -->
   <div>
     <span class="absolute bottom-0 left-0 z-[-1]">
-      <svg xmlns:xmlns=http://www.w3.org/2000/svg width=217 height=229 fill=none viewBox="0 0 217 229"><path fill=url(#paint0_linear) d="M-64 140.5C-64 62.904-1.096 0 76.5 0S217 62.904 217 140.5 154.096 281 76.5 281-64 218.096-64 140.5"/><defs><linearGradient id=paint0_linear x1=76.5 x2=76.5 y1=281 y2=0 gradientUnits=userSpaceOnUse><stop stop-opacity=.08 /><stop offset=1 stop-color=#c4c4c4 stop-opacity=0 /></linearGradient></defs></svg>
+      <svg width="217" height="229" viewBox="0 0 217 229" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M-64 140.5C-64 62.904 -1.096 0 76.5 0C154.096 0 217 62.904 217 140.5C217 218.096 154.096 281 76.5 281C-1.09598 281 -64 218.096 -64 140.5Z" fill="url(#paint0_linear)"></path>
+        <defs>
+          <linearGradient id="paint0_linear" x1="76.5" y1="281" x2="76.5" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="" stop-opacity="0.08"></stop>
+            <stop offset="1" stop-color="#C4C4C4" stop-opacity="0"></stop>
+          </linearGradient>
+        </defs>
+      </svg>
     </span>
     <span class="absolute right-10 top-10 z-[-1]">
-      <svg xmlns:xmlns=http://www.w3.org/2000/svg width=75 height=75 fill=none viewBox="0 0 75 75"><path fill=url(#paint1_linear) d="M37.5 0C58.21 0 75 16.79 75 37.5S58.21 75 37.5 75 0 58.21 0 37.5 16.79 0 37.5 0"/><defs><linearGradient id=paint1_linear x1=0 x2=75 y1=37.5 y2=37.5 gradientUnits=userSpaceOnUse><stop stop-color=#13c296 stop-opacity=.31 /><stop offset=1 stop-color=#c4c4c4 stop-opacity=0 /></linearGradient></defs></svg>
+      <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M37.5 0C58.2107 0 75 16.7893 75 37.5C75 58.2107 58.2107 75 37.5 75C16.7893 75 0 58.2107 0 37.5C0 16.7893 16.7893 0 37.5 0Z" fill="url(#paint1_linear)"></path>
+        <defs>
+          <linearGradient id="paint1_linear" x1="0" y1="37.5" x2="75" y2="37.5" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#13C296" stop-opacity="0.31"></stop>
+            <stop offset="1" stop-color="#C4C4C4" stop-opacity="0"></stop>
+          </linearGradient>
+        </defs>
+      </svg>
     </span>
   </div>
 </footer>
 
-  <script type=module src=uoc-boilerplate.d79ca05f.js></script>
+  <script type="module" src="uoc-boilerplate.8191162c.js"></script>
 
 
+</body></html>
