@@ -57,7 +57,7 @@
   font-family: var(--font-family-base);
 }
 
-/*Usamos para pues  @apply solo reconoce con utilidades Tailwind estándar después añadimos clases personalizadas para colores*/
+/*Usamos para pues @apply solo reconoce con utilidades Tailwind estándar después añadimos clases personalizadas para colores*/
 .btn-primary {
   @apply px-6 py-2 rounded-full text-uocbg transition;
   background-color: var(--color-uocCorporate);
@@ -66,9 +66,8 @@
 .btn-primary:hover {
   background-color: var(--color-hoverColor);
 }
-
 .icon-circle {
-  @apply w-12 h-12 rounded-full flex items-center justify-center;
+  @apply w-12 h-12 flex items-center justify-center rounded-full;
   background-color: var(--color-uocMasterbrand);
   color: var(--color-uocCorporate);
 }
